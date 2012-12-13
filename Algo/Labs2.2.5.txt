@@ -1,0 +1,20 @@
+PROGRAMME Inversion Tableau
+
+VAR
+	tab	: TABLEAU[1..n]	: ENTIER
+	tailleDuTableau		: ENTIER
+	i					: ENTIER
+	tmp					: ENTIER
+
+DEBUT
+	
+	tailleDuTableau <- n
+	
+	POUR i ALLANT DE 1 A (n DIV 2) AU PAS DE 1
+	FAIRE
+		tmp <- tab[i]
+		tab[i] <- tab[tailleDuTableau-i+1]
+		tab[tailleDuTableau-i+1] <- tmp
+	FINPOUR
+	
+FIN

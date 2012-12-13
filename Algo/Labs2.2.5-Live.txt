@@ -1,0 +1,28 @@
+PROGRAMME Inversion d'un tableau
+VAR
+
+	tab : TABLEAU[1...taille] : REEL
+	taille : ENTIER
+	temp <- 0 : ENTIER
+	
+
+DEBUT
+
+	POUR i ALLANT DE 1 A taille AU PAS DE 1
+	FAIRE
+		ECRIRE(tab[i])
+	FINPOUR
+	
+	POUR i ALLANT DE 1 A (taille DIV 2)AU PAS DE 1
+	FAIRE
+		temp <- tab[(taille + 1)-i]
+		tab[(taille + 1)-i] <- tab[i]
+		tab[i] <- temp
+	FINPOUR	
+	
+	POUR i ALLANT DE 1 A taille AU PAS DE 1
+	FAIRE
+		ECRIRE(tab[i])
+	FINPOUR	
+	
+FIN
