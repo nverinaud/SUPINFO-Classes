@@ -1,0 +1,31 @@
+PROGRAMME Recherche
+VAR
+	reels : TABLEAU[1..n]	: REEL
+	reelRecherché			: REEL
+	i <- 1					: ENTIER
+
+DEBUT
+	
+	reelRecherché <- LIRE()
+	
+	TANTQUE ( (i <= n) ET (reels[i] != reelRecherché) )
+	FAIRE
+		i <- i + 1
+	FINTANTQUE
+	
+	SI (i > n)
+	ALORS
+		i <- -1
+	FINSI
+	
+	SI (i = -1)
+	ALORS
+		ECRIRE("L'élément ", reelRecherché, " ne se trouve pas dans le tableau")
+	SINON
+		ECRIRE("L'élément ", reelRecherché, " se trouve à l'indice ", i)
+	FINSI
+	
+FIN
+
+// À la fin du programme i vaut l'indice du premier réel correspondant trouvé ou alors -1 
+// si ce réel n'est pas dans le tableau

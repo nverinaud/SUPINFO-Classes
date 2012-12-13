@@ -1,0 +1,33 @@
+PROGRAMME Recherche du premier indice
+VAR
+	tableau : TABLEAU [1...10]:REEL
+	match: REEL
+	i : ENTIER
+	r <- 0 : ENTIER
+	
+DEBUT
+
+	POUR i ALLANT DE 1 A 10 AU PAS DE 1
+	FAIRE
+		ECRIRE("ENTREZ UNE VALEUR")
+		tableau[i] <- LIRE()
+	FINPOUR
+
+	ECRIRE("entrez la valeur recherchée")
+	match <- LIRE()
+	
+	POUR i ALLANT DE 10 A 1 AU PAS DE -1
+	FAIRE
+		SI tableau[i] = match
+		ALORS 
+			r <- i
+		FINSI
+	FINPOUR
+	
+	SI r = 0
+	ALORS
+		ECRIRE("Pas de résutats")
+	SINON
+		ECRIRE("L'élément ", match, " se trouve à l'indice ", r)
+	FINSI
+FIN
