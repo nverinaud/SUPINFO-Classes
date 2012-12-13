@@ -1,0 +1,34 @@
+PROGRAMME Suite de nombre pairs 
+VAR
+	
+	borneBasse : ENTIER
+	borneHaute : ENTIER
+	tmp : ENTIER
+	
+DEBUT	
+	ECRIRE ("veuillez saisir un borne basse et une borne haute")
+	borneBasse <- LIRE()
+	borneHaute <- LIRE()
+	
+	SI borneHaute < borneBasse
+	ALORS 
+		tmp <- borneBasse
+		borneBasse <- borneHaute
+		borneHaute <- tmp
+		
+	FINSI
+	
+	SI (borneBasse MOD 2 != 0)
+	ALORS
+		borneBasse <- borneBasse + 1
+		ECRIRE(borneBasse)
+	FINSI
+	
+	TANTQUE (borneBasse < borneHaute)
+	FAIRE 
+		borneBasse <- borneBasse +2
+		ECRIRE (borneBasse)
+	FINTANTQUE
+
+FIN
+

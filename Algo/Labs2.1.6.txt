@@ -1,0 +1,39 @@
+PROGRAMME Suite de nombres pairs
+
+VAR
+	borneBasse, borneHaute	: ENTIER
+	compteur				: ENTIER
+	tmp						: ENTIER
+
+DEBUT
+	
+	borneBasse <- LIRE()
+	borneHaute <- LIRE()
+	
+	SI (borneBasse > borneHaute)
+	ALORS
+		tmp <- borneBasse
+		borneBasse <- borneHaute
+		borneHaute <- tmp
+	FINSI
+	
+	SI ((borneBasse MOD 2) = 0)
+	ALORS
+		borneBasse <- borneBasse + 2
+	SINON
+		borneBasse <- borneBasse + 1
+	FINSI
+	
+	SI ((borneHaute MOD 2) = 0)
+	ALORS
+		borneHaute <- borneHaute - 2
+	SINON
+		borneHaute <- borneHaute - 1
+	FINSI
+	
+	POUR compteur ALLANT DE borneBasse A borneHaute AU PAS DE 2
+	FAIRE
+		ECRIRE(compteur)
+	FINPOUR
+
+FIN

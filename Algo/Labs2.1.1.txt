@@ -1,0 +1,32 @@
+PROGRAMME Tri de Trois Réels
+
+VAR
+	x, y, z	: REEL
+	tmp		: REEL
+
+DEBUT
+	
+	SI (y < x)
+	ALORS
+		tmp <- y
+		y <- x
+		x <- tmp
+	FINSI
+	
+	SI (z < y)
+	ALORS
+		tmp <- z
+		z <- y
+		y <- tmp
+	FINSI
+	
+	SI (y < x)
+	ALORS
+		tmp <- y
+		y <- x
+		x <- tmp
+	FINSI
+
+	ECRIRE(x, "<=", y, "<=", z)
+
+FIN

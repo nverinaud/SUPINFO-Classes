@@ -1,0 +1,26 @@
+PROGRAMME Signe d'un Produit
+
+VAR
+	x, y	: REEL
+	signe	: CHAINE
+
+DEBUT
+	
+	x <- LIRE()
+	y <- LIRE()
+	
+	SI (x = 0) OU (y = 0)
+	ALORS
+		signe = "Nul"
+	SINON
+		SI ( (x < 0) ET (y < 0) ) OU ( (x > 0) ET (y > 0) )
+		ALORS
+			signe <- "Positif"
+		SINON
+			signe <- "Négatif"
+		FINSI
+	FINSI
+	
+	ECRIRE("Le signe du produit est ", signe)
+
+FIN

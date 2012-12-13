@@ -1,0 +1,21 @@
+PROGRAMME Montant d'une Remise
+
+VAR
+	montantAchat		: REEL
+	remise <- 0			: REEL
+
+DEBUT
+	
+	montantAchat <- LIRE()
+	
+	SI (montantAchat > 100) ET (montantAchat ≤ 500)
+	ALORS
+		remise <- montantAchat *0.05
+	SINON
+		SI (montantAchat > 500)
+		ALORS
+			remise <- montantAchat * 0.08
+		FINSI
+	FINSI
+
+FIN
