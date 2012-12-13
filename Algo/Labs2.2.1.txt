@@ -1,0 +1,23 @@
+PROGRAMME Nombre d'occurences dans un tableau
+
+VAR
+	tab	: TABLEAU[1..n] : REEL
+	i				: ENTIER
+	recherche		: REEL
+	occurences <- 0	: ENTIER
+	
+DEBUT
+	
+	recherche <- LIRE()
+	
+	POUR i ALLANT DE 1 A n AU PAS DE 1
+	FAIRE
+		SI (tab[i] = recherche)
+		ALORS
+			occurences <- occurences + 1
+		FINSI
+	FINPOUR
+
+	ECRIRE("Nombre d'occurences pour ", recherche, " : ", occurences)
+
+FIN

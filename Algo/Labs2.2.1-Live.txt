@@ -1,0 +1,28 @@
+PROGRAMME Occurences
+VAR
+	tableau : TABLEAU [1...10]:REEL
+	match : REEL
+	i : ENTIER
+	j<-0 : ENTIER
+	
+DEBUT
+
+	POUR i ALLANT DE 1 A 10 AU PAS DE 1
+	FAIRE
+		ECRIRE("ENTREZ UNE VALEUR")
+		tableau[i] <- LIRE()
+	FINPOUR
+
+	ECRIRE("entrez la valeur recherchée")
+	match <- LIRE()
+	
+	POUR i ALLANT DE 1 A 10 AU PAS DE 1
+	FAIRE
+		SI tableau[i] = match
+		ALORS
+			j <- j + 1
+		FINSI
+	FINPOUR
+	
+	ECRIRE("La valeur recherchée a été trouvée ", j, " fois") 
+FIN
