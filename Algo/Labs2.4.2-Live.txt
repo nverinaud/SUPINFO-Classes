@@ -1,0 +1,20 @@
+PROCEDURE AfficherTableau (E: plateau : TABLEAU[1...3][1...3] : ENTIER)
+VAR
+
+	i,j : ENTIERS
+	
+DEBUT
+
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		RETOUR LIGNE ()
+		POUR j ALLANT DE 1 A 3 AU PAS DE 1
+		FAIRE
+			ECRIRE (plateau[i][j])
+		FINPOUR
+	FINPOUR
+	
+FIN
+
+ 
+		
