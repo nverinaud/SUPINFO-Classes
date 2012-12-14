@@ -38,6 +38,24 @@ DEBUT
 FIN
 	
 	
+PROCEDURE ChoixDeLaCase (E/S : plateau : TABLEAU[1...3][1...3] : ENTIER , E : joueur : ENTIER)
+
+VAR
+	i,j : ENTIER
+	
+DEBUT
+	REPETER
+		ECRIRE ("Entrez des valeurs SVP; le 1er c'est la ligne et 2nd c'est la colonne.")
+		i <- LIRE()
+		j <- LIRE()
+		
+	JUSQU'A ((i <= 3 ET i >= 1) ET (j <= 3 ET j >= 1) ET (plateau[i][j] = 0))
+	plateau[i][j] <- joueur
+FIN
+		 
+
+
+	
 	
 	
 	
