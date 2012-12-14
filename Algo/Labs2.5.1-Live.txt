@@ -1,0 +1,29 @@
+
+FONCTION Fibonacci (n : ENTIER ) : ENTIER
+
+DEBUT
+
+	SI n = 0 
+	ALORS
+		RETOURNER (0)
+		
+	SINON
+		SI n = 1
+		ALORS
+			RETOURNER (1)
+			
+		SINON
+			SI n >= 2
+			ALORS
+				RETOURNER (Fibonacci (n - 1) + Fibonacci (n - 2))
+				
+			FINSI
+			
+		FINSI
+		
+	FINSI
+	
+FIN
+			
+
+
