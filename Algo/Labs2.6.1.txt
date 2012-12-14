@@ -1,0 +1,9 @@
+
+PROCEDURE echanger ( E/S : x, y : REEL) 
+VAR 
+	tmp : REEL 
+DEBUT
+	tmp <- x
+	x <- y 
+	y <- tmp
+FIN
