@@ -1,4 +1,4 @@
-PROCEDURE AfficherTableau (E: plateau : TABLEAU[1...3][1...3] : ENTIER)
+PROCEDURE AfficherPlateau (E: plateau : TABLEAU[1...3][1...3] : ENTIER)
 VAR
 
 	i,j : ENTIERS
@@ -101,32 +101,33 @@ DEBUT
 FIN
 	
 	
+PROGRAMME Morpion
+VAR
+	plateau <- {{0,0,0},{0,0,0},{0,0,0}}: TABLEAU[1...3][1...3] : ENTIER
+	joueurEnCours <- 1 : ENTIER 
+	victoire <- FAUX : BOOLEEN
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+DEBUT
 
-
-
-
+	TANTQUE (PlateauContientUneCaseVide(plateau) = VRAI) ET (NON victoire)
+	FAIRE
+		AfficherPlateau(plateau)
+		ChoixDeLaCase(plateau, joueurEnCours)
+		victoire <- WinnerIs(plateau, joueurEnCours)		
 		
+		SI victoire
+		ALORS 
+			ECRIRE("Victoire du joueur ", joueurEnCours)
+		SINON 
+			joueurEnCours <- (joueurEnCours MOD 2) + 1
+		FINSI
+	
+	FINTANTQUE
 		
-		
-		
+	SI (NON victoire)
+	ALORS
+		ECRIRE("Match nul")
+	FINSI
+							
+FIN
+	

@@ -1,0 +1,196 @@
+PROCEDURE AfficherPlateau(E: plateau : TABLEAU[1...3][1...3] : ENTIER)
+VAR
+	i, j : ENTIER
+DEBUT
+
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+
+		POUR j ALLANT DE 1 A 3 AU PAS DE 1
+		FAIRE
+
+			ECRIRE(" ", plateau[i][j], " ")
+
+		FINPOUR
+
+		RETOUR LIGNE()
+
+	FINPOUR
+
+FIN
+
+
+FONCTION PlateauContientUneCaseVide(plateau : TABLEAU[1...3][1...3] : ENTIER) : BOOLEEN
+VAR
+	i, j : ENTIER
+DEBUT
+
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+
+		POUR j ALLANT DE 1 A 3 AU PAS DE 1
+		FAIRE
+
+			SI (plateau[i][j] = 0)
+			ALORS
+				RETOURNER (VRAI)
+			FINSI
+
+		FINPOUR
+
+	FINPOUR 
+
+	RETOURNER (FAUX)
+
+FIN
+
+
+PROCEDURE PlacerUnPion(E/S: plateau : TABLEAU[1...3][1...3] : ENTIER, E: pion : ENTIER)
+VAR
+	i, j : ENTIER
+DEBUT
+
+	REPETER
+
+		ECRIRE("Entrez les coordonnées où placer le pion: ")
+		i <- LIRE()
+		j <- LIRE()
+
+		SI (plateau[i][j] != 0)
+		ALORS
+			ECRIRE("La case n'est pas libre. Rééssayez!")
+		FINSI
+
+	JUSQU'A(plateau[i][j] = 0)
+
+	plateau[i][j] <- pion
+
+FIN
+
+FONCTION Victoire(plateau : TABLEAU[1...3][1...3] : ENTIER, joueur : ENTIER) : BOOLEEN
+VAR
+	i, j 				: ENTIER
+	total <- 0 			: ENTIER
+	victoire <- FAUX 	: BOOLEEN
+DEBUT
+
+	// Test lignes par lignes (horizontal)
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		
+		POUR j ALLANT DE 1 à 3 AU PAS DE 1
+		FAIRE
+			SI plateau[i][j] = joueur
+			ALORS
+				total <- total + 1
+			FINSI
+		FINPOUR
+		
+		SI total = 3
+		ALORS
+			victoire <- VRAI
+		FINSI
+		
+		total <- 0
+	FINPOUR
+	
+	// Test colonnes par colonnes (vertical)
+	POUR j ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		
+		POUR i ALLANT DE 1 A 3 AU PAS DE 1
+		FAIRE
+			SI plateau[i][j] = joueur
+			ALORS
+				total <- total + 1
+			FINSI
+		FINPOUR
+		
+		SI total = 3
+		ALORS
+			victoire <- VRAI
+		FINSI
+		
+		total <- 0
+	FINPOUR
+	
+	// Test première diagonale (en haut à gauche vers en bas à droite)
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		SI plateau[i][i] = joueur
+		ALORS
+			total <- total + 1
+		FINSI
+	FINPOUR
+	
+	SI total = 3 
+	ALORS
+		victoire <- VRAI
+	FINSI
+	
+	total <- 0
+	
+	// Test deuxième diagonale (en haut à droite vers en bas à gauche)
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		SI plateau[i][3-i+1] = joueur
+		ALORS
+			total <- total + 1
+		FINSI
+	FINPOUR
+
+	SI total = 3 
+	ALORS
+		victoire <- VRAI
+	FINSI
+
+	RETOURNER(victoire)
+
+FIN
+
+
+PROGRAMME Morpion
+VAR
+	plateau : TABLEAU[1...3][1...3] : ENTIER
+	i, j : ENTIER
+	joueurEnCours <- 2 : ENTIER
+	victoire <- FAUX : BOOLEEN
+
+DEBUT
+
+	POUR i ALLANT DE 1 A 3 AU PAS DE 1
+	FAIRE
+		POUR j ALLANT DE 1 A 3 AU PAS DE 1
+		FAIRE
+			plateau[i][j] <- 0
+		FINPOUR
+	FINPOUR
+
+	AfficherPlateau(plateau)
+
+	TANT QUE (NON victoire) ET (PlateauContientUneCaseVide(plateau))
+	FAIRE
+
+		SI joueurEnCours = 1
+		ALORS
+			joueurEnCours <- 2
+		SINON
+			joueurEnCours <- 1
+		FINSI
+
+		PlacerUnPion(plateau, joueurEnCours)
+		AfficherPlateau(plateau)
+
+		victoire <- Victoire(plateau, joueurEnCours)
+
+	FINTANTQUE
+
+	SI victoire
+	ALORS
+		ECRIRE("Le joueur ", joueurEnCours, " a gagné !")
+	SINON
+		ECRIRE("Match nul !")
+	FINSI
+
+FIN
+
