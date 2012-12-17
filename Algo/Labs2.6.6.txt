@@ -1,0 +1,61 @@
+
+PROCEDURE fusionner(E/S : tab : TABLEAU[] : REELS, E : taille, début, milieu, fin : ENTIER) 
+VAR 
+	i, j, k : ENTIER
+	pro : TABLEAU[1..taille] : REELS 
+
+DEBUT
+	
+	i <- début 
+	j <- fin 
+	
+	POUR k ALLANT DE 1 A (fin – début + 1) AU PAS DE 1 
+	FAIRE
+		SI ( (i <= milieu) ET (j <= fin) ) 
+		ALORS
+			SI (tab[i] <= tab[j]) 
+			ALORS
+				pro[k] <- tab[i] 
+				i <- i + 1
+			SINON
+				pro[k] <- tab[j] 
+				j <- j + 1
+			FINSI
+		SINON
+			SI (i <= milieu)
+			ALORS
+				pro[k] <- tab[i]
+				i <- i + 1 
+			SINON
+				pro[k] <- tab[j]
+				j <- j + 1
+			FINSI
+		FINSI
+	FINPOUR
+		
+	POUR k ALLANT DE 1 A (fin – début + 1) AU PAS DE 1
+	FAIRE
+		tab[début+k-1] <- pro[k] 
+	FINPOUR
+	
+FIN
+
+
+PROCEDURE triFusionRécursif (E/S : tab : TABLEAU[] : REELS, E : taille, début, fin) 
+DEBUT
+
+	SI (début < fin) 
+	ALORS
+		triFusionRécursif(tab,taille,début,(début+fin) DIV 2) 
+		triFusionRécursif(tab,taille,(début+fin) DIV 2,fin) 
+		fusionner(tab,taille,début,(début+fin) DIV 2,fin)
+	FINSI 
+
+FIN
+
+PROCEDURE triFusion (E/S : tab : TABLEAU[] : REELS, E : taille) 
+DEBUT
+	
+	triFusionRécursif(tab,taille, 1, taille)
+
+FIN

@@ -1,0 +1,27 @@
+
+PROCEDURE triParInsertion(E/S: tab : TABLEAU[] : REEL, taille : ENTIER)
+VAR
+	i, j	: ENTIER
+	retiré	: REEL
+	
+DEBUT
+
+	POUR i ALLANT DE 2 A taille AU PAS DE 1
+	FAIRE
+	
+		retiré <- tab[i]
+		j <- i - 1
+		
+		TANTQUE ( (j > 0) ET (retiré < tab[j]) )
+		FAIRE
+		
+			tab[j+1] <- tab[j]
+			j <- j - 1
+		
+		FINTANTQUE
+		
+		tab[j+1] <- retiré
+	
+	FINPOUR
+
+FIN
