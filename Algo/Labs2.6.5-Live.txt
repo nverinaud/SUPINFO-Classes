@@ -1,0 +1,103 @@
+// Remarque : dans la plupart des algorithmes de tri, on utilisera la procédure d’échange des valeurs de deux variables
+PROCEDURE echanger ( E/S : x, y : REEL) 
+VAR 
+	tmp : REEL 
+DEBUT
+	tmp <- x
+	x <- y 
+	y <- tmp
+FIN
+
+
+PROCEDURE placerPivot(E/S: tab : TABLEAU[] : REEL, E: taille, debut, fin : ENTIER, S: indicePivot : ENTIER)
+VAR
+	i, j : ENTIER
+	pivot : REEL
+
+DEBUT
+
+	pivot <- tab[debut]
+	i <- debut
+	j <- fin
+	
+	TANT QUE (i < j)
+	FAIRE
+	
+		// On cherche l'indice i du dernier élément plus petit ou égal
+		// au pivot sans déborder
+		TANT QUE ((tab[i] <= pivot) ET (i <= j))
+		FAIRE
+			i <- i + 1
+		FINTANTQUE
+		
+		// On cherche l'indice j du dernier élément plus grand que le
+		// pivot sans déborder
+		TANT QUE ((tab[j] > pivot) ET (j > i))
+		FAIRE
+			j <- j - 1
+		FINTANTQUE
+		
+		SI (i < j)
+		ALORS
+			echanger(tab[i], tab[j])
+		FINSI
+	
+	FINTANTQUE
+	
+	indicePivot <- j
+	echanger(tab[j], pivot)
+
+FIN
+
+
+PROCEDURE triRapideRecursif(E/S: tab : TABLEAU[] : REEL, E: taille, debut, fin : ENTIER)
+VAR
+	iPivot : ENTIER
+
+DEBUT
+
+	SI debut < fin
+	ALORS
+		placerPivot(tab, taille, debut, fin, iPivot)
+		triRapidRecursif(tab, taille, debut, iPivot-1)
+		triRapidRecursif(tab, taille, iPivot+1, fin)
+	FINSI
+
+FIN
+
+
+PROCEDURE triRapide(E/S: tab : TABLEAU[] : REEL, E: taille : ENTIER)
+DEBUT
+
+	triRapideRecursif(tab, taille, 1, taille)
+
+FIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
