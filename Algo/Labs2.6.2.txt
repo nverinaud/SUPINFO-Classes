@@ -1,0 +1,69 @@
+
+// Remarque : dans la plupart des algorithmes de tri, on utilisera la procédure d’échange des valeurs de deux variables
+PROCEDURE echanger ( E/S : x, y : REEL) 
+VAR 
+	tmp : REEL 
+DEBUT
+	tmp <- x
+	x <- y 
+	y <- tmp
+FIN
+
+
+
+
+/*
+ * Fonction minTableau
+ *
+ * But: trouve le minimum dans un tableau et retourne l'indice de ce minimum
+ *
+ * Param tab	: tableau dans lequel effectuer la recherche
+ * Param taille : taille du tableau
+ * Param debut	: indice à partir duquel commencer la recherche
+ *
+ * Retourne : l'indice du minimum du tableau
+ */
+FONCTION minTableau(tab : TABLEAU[] : REEL, taille, debut : ENTIER) : ENTIER
+VAR
+	i, indiceDuMin : ENTIER
+	min : REEL
+	
+DEBUT
+	
+	min <- tab[debut]
+	indiceDuMin <- debut
+	
+	POUR i ALLANT DE debut+1 A taille AU PAS DE 1
+	FAIRE
+		SI (tab[i] < min)
+		ALORS
+			min <- tab[i]
+			indiceDuMin <- i
+		FINSI
+	FINPOUR
+	
+	RETOURNER(indiceDuMin)
+	
+FIN
+
+/*
+ * Procédure triParSelection
+ *
+ * But: tri les valeurs d'un tableau donné par ordre croissant
+ *
+ * Param tab (E/S)	: le tableau à trier
+ * Param taille (E) : la taille du tableau
+ */
+PROCEDURE triParSelection(E/S: tab : TABLEAU[] : REEL, E: taille : ENTIER)
+VAR
+	tmpIndice, i : ENTIER
+	
+DEBUT
+
+	POUR i ALLANT DE 1 A taille-1 AU PAS DE 1
+	FAIRE
+		tmpIndice <- minTableau(tab, taille, i)
+		echanger(tab[i], tab[tmpIndice])
+	FINPOUR
+
+FIN
