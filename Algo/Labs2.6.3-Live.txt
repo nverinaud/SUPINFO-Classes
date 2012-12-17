@@ -1,0 +1,31 @@
+// Remarque : dans la plupart des algorithmes de tri, on utilisera la procédure d’échange des valeurs de deux variables
+PROCEDURE echanger ( E/S : x, y : REEL) 
+VAR 
+	tmp : REEL 
+DEBUT
+	tmp <- x
+	x <- y 
+	y <- tmp
+FIN
+
+
+PROCEDURE triABulles(E/S : tab : TABLEAU[]: REEL, E: taille : ENTIER)
+VAR
+	compteur : ENTIER
+	echangeEffectue : BOOLEEN
+
+DEBUT
+	
+	REPETER
+		echangeEffectue <- FAUX
+		POUR compteur ALLANT DE 1 A taille -1 AU PAS DE 1
+		FAIRE
+			SI tab[compteur] > tab[compteur + 1]
+			ALORS
+				echanger(tab[compteur], tab[compteur + 1])
+				echangeEffectue <- VRAI
+			FINSI
+		FINPOUR
+	JUSQUA (NON echangeEffectue)
+
+FIN
