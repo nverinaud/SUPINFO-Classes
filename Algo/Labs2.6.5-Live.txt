@@ -32,7 +32,7 @@ DEBUT
 		
 		// On cherche l'indice j du dernier élément plus grand que le
 		// pivot sans déborder
-		TANT QUE ((tab[j] > pivot) ET (j > i))
+		TANT QUE ((tab[j] > pivot) ET (i <= j))
 		FAIRE
 			j <- j - 1
 		FINTANTQUE
