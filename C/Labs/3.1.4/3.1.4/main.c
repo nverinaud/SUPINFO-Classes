@@ -12,17 +12,12 @@ int main(int argc, const char * argv[])
 {
 	int nombreDeLignes, nombreEtoiles, i;
 	
-	printf("Entrer un nombre");
-	scanf("%d", &nombreDeLignes);
-	
-	while (nombreDeLignes<0)
+	do
 	{
-		printf("Entrez un entier positif");
+		printf("Entrez un entier positif: ");
 		scanf("%d", &nombreDeLignes);
 	}
-	
-	nombreEtoiles=nombreDeLignes;
-	
+	while (nombreDeLignes <= 0);
 	
 	for (i=nombreDeLignes; i>=1; i--)
 	{
@@ -32,7 +27,6 @@ int main(int argc, const char * argv[])
 		}
 		printf("\n");
 	}
-	
 	
     return 0;
 }
