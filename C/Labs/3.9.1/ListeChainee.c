@@ -117,14 +117,14 @@ void ListeChaineePrintf(ListeChainee *liste)
 }
 
 
-int ListeChaineeRetirerDebut(ListeChainee *liste)
-{
-	int valeur = EOF;
-	
+int ListeChaineeRetirerDebut(ListeChainee *liste, int *valeurRetiree)
+{	
 	if (liste->premier != NULL)
 	{
 		ListeChaineeMaillon *ancienPremier = liste->premier;
-		valeur = ancienPremier->valeur;
+		
+		if (valeurRetiree != NULL)
+			*valeurRetiree = ancienPremier->valeur;
 		
 		if (ancienPremier->suivant != NULL)
 			liste->premier = ancienPremier->suivant;
@@ -135,15 +135,13 @@ int ListeChaineeRetirerDebut(ListeChainee *liste)
 		liste->taille--;
 	}
 	
-	return valeur;
+	return liste->taille > 0;
 }
 
 
 
-int ListeChaineeRetirerFin(ListeChainee *liste)
-{
-	int valeur = EOF;
-	
+int ListeChaineeRetirerFin(ListeChainee *liste, int *valeurRetiree)
+{	
 	if (liste->premier != NULL)
 	{
 		ListeChaineeMaillon *dernier = liste->premier;
@@ -155,7 +153,9 @@ int ListeChaineeRetirerFin(ListeChainee *liste)
 			dernier = dernier->suivant;
 		}
 		
-		valeur = dernier->valeur;
+		if (valeurRetiree != NULL)
+			*valeurRetiree = dernier->valeur;
+		
 		avantDernier->suivant = NULL;
 		
 		free(dernier);
@@ -163,10 +163,39 @@ int ListeChaineeRetirerFin(ListeChainee *liste)
 		liste->taille--;
 	}
 	
-	return valeur;
+	return liste->taille > 0;
 }
 
 
+void ListeChaineeInserer(ListeChainee *liste, ListeChaineeMaillon *apres, int valeur)
+{
+	ListeChaineeMaillon *suivant = apres->suivant;
+	
+	ListeChaineeMaillon *aInserer = malloc(sizeof(ListeChaineeMaillon));
+	aInserer->valeur = valeur;
+	aInserer->suivant = suivant;
+	
+	apres->suivant = aInserer;
+	
+	liste->taille++;
+}
+
+
+int ListeChaineeRetirer(ListeChainee *liste, ListeChaineeMaillon *aRetirer, int *valeurRetiree)
+{
+	ListeChaineeMaillon *suivant = aRetirer->suivant;
+	if (valeurRetiree != NULL)
+		*valeurRetiree = aRetirer->valeur;
+	
+	ListeChaineeMaillon *precedent = liste->premier;
+	while (precedent->suivant != aRetirer)
+		precedent = precedent->suivant;
+	
+	precedent->suivant = suivant; // Celui d'avant doit pointer sur celui d'après
+	
+	liste->taille--;
+	return liste->taille > 0;
+}
 
 
 

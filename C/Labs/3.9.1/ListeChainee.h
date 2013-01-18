@@ -33,8 +33,11 @@ ListeChaineeMaillon *ListeChaineeGetPremierMaillon(ListeChainee *liste);
 void ListeChaineeAjouterAuDebut(ListeChainee *liste, int valeur);
 void ListeChaineeAjouterFin(ListeChainee *liste, int valeur);
 
-int ListeChaineeRetirerDebut(ListeChainee *liste);
-int ListeChaineeRetirerFin(ListeChainee *liste);
+int ListeChaineeRetirerDebut(ListeChainee *liste, int *valeurRetiree);
+int ListeChaineeRetirerFin(ListeChainee *liste, int *valeurRetiree);
+
+void ListeChaineeInserer(ListeChainee *liste, ListeChaineeMaillon *apres, int valeur);
+int ListeChaineeRetirer(ListeChainee *liste, ListeChaineeMaillon *aRetirer, int *valeurRetiree);
 
 void ListeChaineePrintf(ListeChainee *liste);
 

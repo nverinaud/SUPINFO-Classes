@@ -25,18 +25,50 @@ int main(int argc, const char * argv[])
 			ListeChaineeAjouterFin(liste, i);
 	}
 	
+	printf("-- Apres Insertion --\n");
 	ListeChaineePrintf(liste);
 	
-	int valeurRetiree = ListeChaineeRetirerFin(liste);
+	int valeurRetiree;
+	ListeChaineeRetirerFin(liste, &valeurRetiree);
+	printf("-- Apres Retrait a la fin --\n");
 	printf("Valeur retiree: %d\n", valeurRetiree);
 	ListeChaineePrintf(liste);
 	
-	valeurRetiree = ListeChaineeRetirerDebut(liste);
+	ListeChaineeRetirerDebut(liste, &valeurRetiree);
+	printf("-- Apres Retrait au debut --\n");
 	printf("Valeur retiree: %d\n", valeurRetiree);
 	ListeChaineePrintf(liste);
+	
+	ListeChaineeMaillon *maillon = liste->premier->suivant;
+	ListeChaineeRetirer(liste, maillon, &valeurRetiree);
+	printf("-- Apres Retirer --\n");
+	printf("Valeur retiree: %d\n", valeurRetiree);
+	ListeChaineePrintf(liste);
+	
+	printf("-- Apres Inserer --\n");
+	ListeChaineeInserer(liste, liste->premier, 10);
+	ListeChaineePrintf(liste);
+	
 	
 	ListeChaineeDetruire(liste);
 	
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
