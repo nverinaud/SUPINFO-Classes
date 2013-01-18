@@ -29,6 +29,9 @@ void ListeChaineeDetruire(ListeChainee *liste);
 int ListeChaineeGetTaille(ListeChainee *liste);
 ListeChaineeMaillon *ListeChaineeGetPremierMaillon(ListeChainee *liste);
 void ListeChaineeAjouterAuDebut(ListeChainee *liste, int valeur);
+void ListeChaineeAjouterFin(ListeChainee *liste, int valeur);
+
+void ListeChaineePrintf(ListeChainee *liste);
 
 #endif
 

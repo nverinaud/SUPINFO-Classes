@@ -10,16 +10,22 @@
 #include <stdlib.h>
 #include "ListeChainee.h"
 
+#define TAILLE_LISTE 10
+
 int main(int argc, const char * argv[])
 {
 	ListeChainee *liste = ListeChaineeCreer();
 	
-	printf("Liste: %p\n", liste);
+	int i;
+	for (i = 0; i < TAILLE_LISTE; i++)
+	{
+		if (i%2 == 0)
+			ListeChaineeAjouterAuDebut(liste, i);
+		else
+			ListeChaineeAjouterFin(liste, i);
+	}
 	
-	ListeChaineeAjouterAuDebut(liste, 1);
-	
-	ListeChaineeMaillon *premier = ListeChaineeGetPremierMaillon(liste);
-	printf("Valeur du premier maillon: %d", premier->valeur);
+	ListeChaineePrintf(liste);
 	
 	ListeChaineeDetruire(liste);
 	

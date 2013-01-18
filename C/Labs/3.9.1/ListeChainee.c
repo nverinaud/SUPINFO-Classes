@@ -43,15 +43,12 @@ int ListeChaineeGetTaille(ListeChainee *liste)
 
 ListeChaineeMaillon *ListeChaineeGetPremierMaillon(ListeChainee *liste)
 {
-	printf("(GetPremierMaillon) Liste: %p\n", liste);
 	return liste->premier;
 }
 
 
 void ListeChaineeAjouterAuDebut(ListeChainee *liste, int valeur)
-{
-	printf("(AjouterAuDebut) Liste: %p\n", liste);
-	
+{	
 	ListeChaineeMaillon *premierCourant = liste->premier;
 	if (premierCourant == NULL)
 	{
@@ -67,7 +64,73 @@ void ListeChaineeAjouterAuDebut(ListeChainee *liste, int valeur)
 		maillon->suivant = premierCourant;
 		liste->premier = maillon;
 	}
+	
+	liste->taille++;
 }
+
+void ListeChaineeAjouterFin(ListeChainee *liste, int valeur)
+{
+	if (liste->premier == NULL)
+	{
+		ListeChaineeAjouterAuDebut(liste, valeur);
+	}
+	else
+	{
+		ListeChaineeMaillon *maillon = malloc(sizeof(ListeChaineeMaillon));
+		maillon->suivant = NULL;
+		maillon->valeur = valeur;
+		
+		ListeChaineeMaillon *dernier = liste->premier;
+		
+		while (dernier->suivant != NULL)
+			dernier = dernier->suivant;
+		
+		dernier->suivant = maillon;
+		
+		liste->taille++;
+	}
+}
+
+
+void ListeChaineePrintf(ListeChainee *liste)
+{
+	ListeChaineeMaillon *maillon = liste->premier;
+	
+	printf("<ListeChainee %p> [%d]", liste, liste->taille);
+	
+	if (liste->premier != NULL)
+		printf(" (\n\t");
+		
+	while (maillon != NULL)
+	{
+		printf("%d", maillon->valeur);
+		if (maillon->suivant != NULL)
+			printf(",\n\t");
+		
+		maillon = maillon->suivant;
+	}
+	
+	if (liste->premier != NULL)
+		printf("\n)");
+	
+	printf("\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
