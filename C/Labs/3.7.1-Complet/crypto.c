@@ -60,7 +60,7 @@ char* chiffrer_phrase(int x, int b, char* phrase)
 {
 	char* phraseUppercase = newUppercaseStringFromString(phrase);
 		
-	char* phraseChiffree = malloc(strlen(phraseUppercase)+1 * sizeof(char));
+	char* phraseChiffree = malloc((strlen(phraseUppercase)+1) * sizeof(char));
 	
 	int k = 0;
 	while (phraseUppercase[k] != '\0') 
@@ -78,7 +78,7 @@ char* chiffrer_phrase(int x, int b, char* phrase)
 
 char* dechiffrer_phrase(int x, int b, char* phrase)
 {
-	char* phraseDechiffree = malloc(strlen(phrase)+1 * sizeof(char));
+	char* phraseDechiffree = malloc((strlen(phrase)+1) * sizeof(char));
 	
 	int k = 0;
 	while (phrase[k] != '\0') 
@@ -162,7 +162,7 @@ char dechiffrer_lettre(int x, int b, char lettre)
 
 char* newUppercaseStringFromString(const char* str)
 {
-	char* uppercasedStr = malloc(strlen(str)+1 * sizeof(char));
+	char* uppercasedStr = malloc((strlen(str)+1) * sizeof(char));
 	
 	int k = 0; // Index de parcours de la chaîne originale
 	int i = k; // Index dans la nouvelle chaîne
