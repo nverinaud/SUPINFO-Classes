@@ -26,10 +26,15 @@ typedef struct ListeChainee ListeChainee;
 
 ListeChainee *ListeChaineeCreer(void);
 void ListeChaineeDetruire(ListeChainee *liste);
+
 int ListeChaineeGetTaille(ListeChainee *liste);
 ListeChaineeMaillon *ListeChaineeGetPremierMaillon(ListeChainee *liste);
+
 void ListeChaineeAjouterAuDebut(ListeChainee *liste, int valeur);
 void ListeChaineeAjouterFin(ListeChainee *liste, int valeur);
+
+int ListeChaineeRetirerDebut(ListeChainee *liste);
+int ListeChaineeRetirerFin(ListeChainee *liste);
 
 void ListeChaineePrintf(ListeChainee *liste);
 

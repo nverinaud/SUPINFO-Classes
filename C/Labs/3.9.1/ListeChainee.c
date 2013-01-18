@@ -117,7 +117,54 @@ void ListeChaineePrintf(ListeChainee *liste)
 }
 
 
+int ListeChaineeRetirerDebut(ListeChainee *liste)
+{
+	int valeur = EOF;
+	
+	if (liste->premier != NULL)
+	{
+		ListeChaineeMaillon *ancienPremier = liste->premier;
+		valeur = ancienPremier->valeur;
+		
+		if (ancienPremier->suivant != NULL)
+			liste->premier = ancienPremier->suivant;
+		else
+			liste->premier = NULL;
+		
+		free(ancienPremier);
+		liste->taille--;
+	}
+	
+	return valeur;
+}
 
+
+
+int ListeChaineeRetirerFin(ListeChainee *liste)
+{
+	int valeur = EOF;
+	
+	if (liste->premier != NULL)
+	{
+		ListeChaineeMaillon *dernier = liste->premier;
+		ListeChaineeMaillon *avantDernier = dernier;
+		
+		while (dernier->suivant != NULL)
+		{
+			avantDernier = dernier;
+			dernier = dernier->suivant;
+		}
+		
+		valeur = dernier->valeur;
+		avantDernier->suivant = NULL;
+		
+		free(dernier);
+		
+		liste->taille--;
+	}
+	
+	return valeur;
+}
 
 
 

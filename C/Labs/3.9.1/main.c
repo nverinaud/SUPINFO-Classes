@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include "ListeChainee.h"
 
-#define TAILLE_LISTE 10
+#define TAILLE_LISTE 5
 
 int main(int argc, const char * argv[])
 {
@@ -25,6 +25,14 @@ int main(int argc, const char * argv[])
 			ListeChaineeAjouterFin(liste, i);
 	}
 	
+	ListeChaineePrintf(liste);
+	
+	int valeurRetiree = ListeChaineeRetirerFin(liste);
+	printf("Valeur retiree: %d\n", valeurRetiree);
+	ListeChaineePrintf(liste);
+	
+	valeurRetiree = ListeChaineeRetirerDebut(liste);
+	printf("Valeur retiree: %d\n", valeurRetiree);
 	ListeChaineePrintf(liste);
 	
 	ListeChaineeDetruire(liste);
