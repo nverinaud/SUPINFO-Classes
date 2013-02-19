@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Demo Function</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			// Passage de paramètre par valeur
+			var myVar = 10;
+			console.log("myVar = " + myVar);
+			myFunction(myVar);
+			console.log("myVar = " + myVar);
+
+			function myFunction(param)
+			{
+				console.log("param = " + param);
+				param = 11;
+				console.log("param = " + param);
+			}
+
+
+			// Passage de paramètre objet par valeur
+			var myVarObject = {};
+			myVarObject.foo = 10;
+			console.log("myVarObject.foo = " + myVarObject.foo);
+			myFunctionObject(myVarObject);
+			console.log("myVarObject.foo = " + myVarObject.foo);
+
+			function myFunctionObject(param)
+			{
+				console.log("param.foo = " + param.foo);
+				param.foo = 11;
+				console.log("param.foo = " + param.foo);
+			}
+
+
+			// Scope de variables
+			function scopeVariable() // La fonction définit un scope
+			{
+				if (true) // Le if ne définit pas de scope
+				{
+					var hello = "Hello";
+				}
+
+				console.log(hello); // ca marche !
+			}
+
+			scopeVariable();
+
+			// console.log(hello); // fail, hello est declarée en locale dans la fonction scopeVariable
+
+			// Function expression
+			var pow = function(x, i) {
+				return Math.pow(x, i);
+			};
+
+			console.log(pow(2, 3));
+
+			var Livre = {};
+			Livre.titre = "Hello";
+
+			Livre.affiche = function() {
+				console.log("Titre: " + this.titre);
+			};
+
+			Livre.affiche();
+
+			console.log(Livre);
+
+		</script>
+	</body>
+</html>
