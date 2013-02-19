@@ -6,22 +6,30 @@
 		
 		<style>
 
-			input[type="button"] {
-				position: absolute;
-				top: 10px;
-			}
-
 		</style>
 	</head>
 	<body>
 		
-		<input type="button" value="Click me !" onclick="onButtonClicked(this);" />
-
+		<input type="button" value="Click me !" id="click-button" />
+		
+		<form action="post.php" id="myForm">
+			<input type="submit" value="Go !">			
+		</form>
 
 		<script type="text/javascript">
 
-		function onButtonClicked(button)
+		var button = document.getElementById("click-button");
+		button.addEventListener("click", onButtonClicked);
+
+		var myForm = document.getElementById("myForm");
+		myForm.addEventListener("submit", function(event){
+			event.preventDefault();
+		});
+
+		function onButtonClicked(event)
 		{
+			console.log(event);
+			var button = event.target;
 			var topAsString = button.style.top;
 			var top = 0;
 			if (topAsString !== "")
