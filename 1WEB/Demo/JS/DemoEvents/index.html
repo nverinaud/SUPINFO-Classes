@@ -18,27 +18,29 @@
 
 		<script type="text/javascript">
 
-		var button = document.getElementById("click-button");
-		button.addEventListener("click", onButtonClicked);
+			document.body.onload = function(){
+				var button = document.getElementById("click-button");
+				button.addEventListener("click", onButtonClicked);
 
-		var myForm = document.getElementById("myForm");
-		myForm.addEventListener("submit", function(event){
-			event.preventDefault();
-		});
+				var myForm = document.getElementById("myForm");
+				myForm.addEventListener("submit", function(event){
+					event.preventDefault();
+				});
+			};
 
-		function onButtonClicked(event)
-		{
-			console.log(event);
-			var button = event.target;
-			var topAsString = button.style.top;
-			var top = 0;
-			if (topAsString !== "")
-				top = parseInt(topAsString);
 			
-			top += 20;
-			button.style.top = top + 'px';
-		}
-
+			function onButtonClicked(event)
+			{
+				console.log(event);
+				var button = event.target;
+				var topAsString = button.style.top;
+				var top = 0;
+				if (topAsString !== "")
+					top = parseInt(topAsString);
+				
+				top += 20;
+				button.style.top = top + 'px';
+			}
 		</script>
 	</body>
 </html>
