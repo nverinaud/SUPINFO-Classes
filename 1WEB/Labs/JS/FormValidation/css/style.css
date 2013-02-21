@@ -1,0 +1,13 @@
+input.invalidField {
+	border: 1px solid red;
+	color: red;
+}
+
+input:focus, textarea:focus {
+	background-color: #FBFFD9;
+}
+
+form span {
+	display: none;
+	color: red;
+}

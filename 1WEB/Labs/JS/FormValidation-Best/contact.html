@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+
+ 	<head>  		
+  		<title>Contact</title>
+  		
+  		<link rel="stylesheet" media="all" href="css/style.css" />
+  	</head>
+  	
+  	<body>
+  	
+  	<h1>Nicolas VERINAUD</h1>
+  	<form action="contact.html" method="post" id="contactForm">
+	  	<fieldset>
+	  		<legend>Informations</legend>
+	  		
+	  		<table>
+	  			<tr>
+	  				<td><label for="firstname">First Name :</label></td>
+	  				<td><input type="text" value="" name="firstname" id="firstname" tabindex="1" /></td>
+	  				<td><span id="firstname_invalid">Vous devez renseigner un nom valide (uniquement des lettres).</span></td>
+	  			</tr>
+	  			<tr>
+	  				<td><label for="lastname">Last Name :</label></td>
+	  				<td><input type="text" value="" name="lastname" id="lastname" tabindex="2" /></td>
+	  				<td><span id="lastname_invalid">Vous devez renseigner un pr&eacute;nom valide (uniquement des lettres).</span></td>
+	  			</tr>
+	  			<tr>
+	  				<td><label for="email">E-Mail :</label></td>
+	  				<td><input type="text" value="" name="email" id="email" tabindex="3" accesskey="e"/></td>
+	  				<td><span id="email_invalid">Vous devez renseigner une adresse e-mail valide.</span></td>
+	  			</tr>
+	  			<tr>
+	  				<td>Sex :</td>
+	  				<td>
+	  					<label for="m">Male</label>
+	  					<input type="radio" value="M" name="sex" id="m" />
+	  					
+	  					<label for="f">Female</label>
+	  					<input type="radio" value="F" name="sex" id="f" checked="checked" />
+	  				</td>
+	  			</tr>
+	  		</table>
+	  		
+	  	</fieldset>
+	  	
+	  	<h2>Comments</h2>
+	  	<p>
+	  		<textarea cols="50" rows="10" name="comment" tabindex="4" accesskey="c"></textarea>
+	  		<span id="comment_invalid">Exprimez-vous !</span>
+	  	</p>
+	  	
+	  	<p>
+	  		<input type="checkbox" value="0" name="news" id="news" />
+	  		<label for="news">Je veux m'inscrire &agrave; la Newsletter !</label>
+	  	</p>
+	  	
+	  	<p>
+	  		<input type="submit" value="Send!" tabindex="5" />
+	  		<input type="reset" value="Reset" />
+	  	</p>
+  	</form>
+  	
+  	<script src="js/script.js"></script>
+  		
+  	</body>
+  	
+</html>
