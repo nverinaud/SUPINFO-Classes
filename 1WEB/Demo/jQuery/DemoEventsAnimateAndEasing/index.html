@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>jQuery Demo</title>
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+
+		<style>
+
+			#animateMe
+			{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				color: white;
+				font-weight: bold;
+				background-color: black;
+				top: 0;
+				left: 0;
+			}
+
+			#bwowTitle
+			{
+				text-align: center;
+				width: 100%;
+				font-size: 2em;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		
+		<h1 id="bwowTitle">Bwow !!</h1>
+		
+		<p id="animateMe">
+			Animate Me Please !
+		</p>
+
+		
+		<script type="text/javascript">
+
+			$("#animateMe").animate({
+				left: "+=500",
+				top: "+=200",
+				width: "400",
+				height: "200",
+				opacity: "hide"
+			}, 4000);
+
+			$("#bwowTitle").animate({
+				"font-size" : "+=10em"
+			}, 2000, "easeInOutElastic");
+
+			$("#bwowTitle").hover(function(){
+				$(this).css("color", "pink");
+				$(this).html("Bwah");
+			}, function(){
+				$(this).css("color", "black");
+				$(this).html("Bwow !!");
+			});
+
+			$("#bwowTitle").click(function(){
+
+				$(this).slideUp(1000, function(){
+					$(this).slideDown(1000);
+				});
+
+			});
+
+		</script>
+	</body>
+</html>
