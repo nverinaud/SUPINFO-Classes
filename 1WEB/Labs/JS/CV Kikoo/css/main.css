@@ -5,6 +5,7 @@ body
 {
 	font-family: "Verdana", cursive;
 	font-size: 0.8em;
+	padding-top: 150px;
 }
 
 h1 
@@ -193,4 +194,12 @@ a#twit-img img {
 	text-decoration:underline;
 	font-size: 2em;
 	text-align:center
+}
+
+#haut
+{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
