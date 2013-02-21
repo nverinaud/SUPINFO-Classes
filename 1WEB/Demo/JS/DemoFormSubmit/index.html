@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Demo Form Submit</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+	</head>
+	<body>
+		
+		<form action="post.php" method="post" id="contactForm">
+			
+			<p>
+				<label for="lastname">Nom :</label>
+				<input type="text" name="lastname" id="lastname" />
+				<span class="hide error" id="lastname-error">Ce champs est invalide.</span>
+			</p>
+			
+			<input type="submit" value="Envoyer">
+			
+		</form>
+
+
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
