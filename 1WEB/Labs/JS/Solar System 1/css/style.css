@@ -1,0 +1,39 @@
+
+ul {
+	width: 500px;
+	margin: auto;
+	padding-top: 20px;
+}
+
+ul li {
+	float: left;
+	position: relative;
+	background-color: #000;
+	margin: 10px;
+}
+
+ul.javascript-disabled li:hover img {
+	opacity: 0.5;
+}
+
+ul.javascript-disabled li:hover span {
+	display: inline;
+}
+
+ul li img {
+	width: 130px;
+	height: 130px;
+}
+
+ul li span {
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+
+
