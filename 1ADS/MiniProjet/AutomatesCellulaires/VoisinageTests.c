@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include "VoisinageUtils.h"
 #include "VoisinageMoore.h"
 #include "VoisinageNeumann.h"
 #include "VoisinageFantomes.h"

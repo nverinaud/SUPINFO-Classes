@@ -8,14 +8,15 @@
 
 #include <stdio.h>
 #include <libc.h>
+#include "VoisinageUtils.h"
 #include "VoisinageNeumann.h"
 
-void saisie_neumann_avec_message(int T[4], const char *msg)
+void saisie_neumann_avec_message(int T[5], const char *msg)
 {
 	int i = 0;
 	int entreeUtilisateur = -1;
 	
-	while (i < 4)
+	while (i < 5)
 	{
 		printf(msg, i);
 		scanf("%d", &entreeUtilisateur);
@@ -30,13 +31,13 @@ void saisie_neumann_avec_message(int T[4], const char *msg)
 	}
 }
 
-void saisie_B_N(int B[4])
+void saisie_B_N(int B[5])
 {
 	saisie_neumann_avec_message(B, "Une cellule morte ayant %d voisins sera t‐elle vivante à la génération suivante ? (0: non, 1: oui) ");
 }
 
 
-void saisie_S_N(int S[4])
+void saisie_S_N(int S[5])
 {
 	saisie_neumann_avec_message(S, "Une cellule vivante ayant %d voisins sera t‐elle vivante à la génération suivante ? (0: non, 1: oui) ");
 }
@@ -87,7 +88,7 @@ int nb_voisins_N(int **tab, int i, int j, int n, int m)
 }
 
 
-void generation_suivante_N(int **tab1, int **tab2, int n, int m, int B[4], int S[4])
+void generation_suivante_N(int **tab1, int **tab2, int n, int m, int B[5], int S[5])
 {
 	int nbVoisins = 0;
 	int i, j;
@@ -107,7 +108,7 @@ void generation_suivante_N(int **tab1, int **tab2, int n, int m, int B[4], int S
 }
 
 
-void jeu_N(int **tab1, int n, int m, int B[4], int S[4], int ng)
+void jeu_N(int **tab1, int n, int m, int B[5], int S[5], int ng)
 {
 	int i;
 	int **tab2 = NULL;
@@ -144,7 +145,7 @@ void jeu_Neumann_predefini(int **tab1, int n, int m, int ng)
 /*
  BONUS
  */
-void jeu_N_timing(int **tab1, int n, int m, int B[4], int S[4], int ng, double timing)
+void jeu_N_timing(int **tab1, int n, int m, int B[5], int S[5], int ng, double timing)
 {
 	int i;
 	int **tab2 = NULL;

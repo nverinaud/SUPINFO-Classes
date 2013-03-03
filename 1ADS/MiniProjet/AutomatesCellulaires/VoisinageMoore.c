@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <libc.h>
 #include "VoisinageMoore.h"
+#include "VoisinageUtils.h"
 
 
 /*
@@ -96,7 +97,7 @@ int nb_voisins_M(int **tab, int i, int j, int n, int m)
 			if (test.y == i && test.x == j) // Position de notre cellule, ce n'est pas un voisin !
 				continue;
 			
-			if (tab[test.y][test.x]) // équivalent à if (tab[test.y][test.x] == 1)
+			if (tab[test.y][test.x] == 1)
 				nbVoisins++;
 		}
 	}

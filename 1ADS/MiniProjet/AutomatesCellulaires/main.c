@@ -8,10 +8,16 @@
 
 #include <stdio.h>
 #include "Voisinage.h"
+#include "Tests.h"
+
+#define EXECUTE_TESTS 1
 
 int main(int argc, const char * argv[])
 {
-	test_brian_silverman_predefini();
+	if (EXECUTE_TESTS == 1)
+		tests_execute();
+	else
+		test_brian_silverman_predefini();
 	
     return 0;
 }

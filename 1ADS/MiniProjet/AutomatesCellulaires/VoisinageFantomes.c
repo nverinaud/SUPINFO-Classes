@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <libc.h>
+#include "VoisinageUtils.h"
 #include "VoisinageCore.h"
 #include "VoisinageMoore.h"
 #include "VoisinageFantomes.h"

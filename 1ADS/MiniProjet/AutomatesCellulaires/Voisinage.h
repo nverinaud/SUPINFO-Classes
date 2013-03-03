@@ -9,6 +9,7 @@
 #ifndef AutomatesCellulaires_Voisinage_h
 #define AutomatesCellulaires_Voisinage_h
 
+#include "VoisinageUtils.h"
 #include "VoisinageCore.h"
 #include "VoisinageMoore.h"
 #include "VoisinageNeumann.h"
