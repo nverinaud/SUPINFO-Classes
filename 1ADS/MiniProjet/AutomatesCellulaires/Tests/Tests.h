@@ -12,14 +12,14 @@
 void tests_execute(void);
 
 // Moore
-void tests_nb_voisins_M(void);
-void tests_generation_suivante_M(void);
+double tests_nb_voisins_M(void);
+double tests_generation_suivante_M(void);
 
 // Neumann
-void tests_nb_voisins_N(void);
-void tests_generation_suivante_N(void);
+double tests_nb_voisins_N(void);
+double tests_generation_suivante_N(void);
 
 // Fantômes
-void tests_generation_suivante_Fantome(void);
+double tests_generation_suivante_Fantome(void);
 
 #endif
