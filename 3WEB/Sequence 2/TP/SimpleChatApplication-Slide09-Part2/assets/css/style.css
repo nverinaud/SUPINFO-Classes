@@ -1,0 +1,16 @@
+input[type="text"] 
+{
+	margin-left: 25px;
+	width: 310px;
+}
+
+#chatroom
+{
+	width: 400px;
+}
+
+blockquote
+{
+	border: 1px solid black;
+	padding: 10px;
+}

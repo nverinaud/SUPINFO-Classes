@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>Simple Chat Application</title>
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+	<h1>Welcome to the chat =3</h1>
+	
+	<div id="chatroom">
+		<blockquote id="placeholder-message">No messages yet, so boring... :(</blockquote>
+	</div>
+
+	<form action="/messages" method="post" id="new-message-form">
+		<fieldset>
+			<div>
+				<input type="text" id="msg-field" name="msg" placeholder="Say something..." />
+				<input type="submit" value="Say It !" />
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/assets/js/client.js"></script>
+	
+</body>
+</html>
