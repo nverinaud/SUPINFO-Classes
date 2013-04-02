@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>SUPINFO STudents</title>
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+
+		<h1>Students</h1>
+		<hr />
+		<img src="assets/img/loader.gif" alt="loader" id="loader" />
+		<table class="well">
+			<thead>
+				<tr>
+					<td>Id Booster</td>
+					<td>Firstname</td>
+					<td>Lastname</td>
+					<td>Birthdate</td>
+					<td>Actions</td>
+				</tr>
+			</thead>
+			<tbody id="students-tbody">
+				<tr>
+					<td colspan="5">Loading...</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Add student</h2>
+		<form id="add-student" action="http://restful-example.appspot.com/students" method="POST">
+			<table>
+				<tbody>
+					<tr>
+						<td><label for="input-idBooster">ID Booster :</label></td>
+						<td><input type="text" name="idBooster" id="input-idBooster" /></td>
+					</tr>
+					<tr>
+						<td><label for="input-firstName">First name :</label></td>
+						<td><input type="text" name="firstName" id="input-firstName" /></td>
+					</tr>
+					<tr>
+						<td><label for="input-lastName">Last name :</label></td>
+						<td><input type="text" name="lastName" id="input-lastName" /></td>
+					</tr>
+					<tr>
+						<td ><input type="submit" value="Create" /></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+
+
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</body>
+</html>

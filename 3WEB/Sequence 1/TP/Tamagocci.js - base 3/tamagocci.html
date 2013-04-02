@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tamagocci</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="src/tamagocci.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+			var tamagocciDiv = document.getElementById("tamagocci")
+				, eatButton = document.getElementById("eat-button")
+				, playButton = document.getElementById("play-button");
+
+        	var tamagocci = new HelloKitty();
+            tamagocci.ondie = function() {
+                stopTheGame();
+            }
+
+        	update();
+
+        	eatButton.onclick = function() {
+        		tamagocci.eat();
+        		update();
+        	}
+
+        	playButton.onclick = function() {
+        		tamagocci.play();
+        		update();
+        	}
+
+        	var intervalID = setInterval(function() {
+        		tamagocci.becomeOlder();
+        		update();
+        	}, 5000);
+
+        	function displayOrRefreshTamagocciPicture() {
+        		var tamagocciPicture = document.getElementById("picture");
+        		tamagocciPicture.setAttribute("src", tamagocci.getPicture());
+        	}
+
+        	function displayOrRefreshTamagocciInfo() {
+	        	document.getElementById("age").innerHTML = tamagocci.age;
+	        	document.getElementById("minWeight").innerHTML = tamagocci.minWeight;
+	        	document.getElementById("weight").innerHTML = tamagocci.weight;
+	        	document.getElementById("maxWeight").innerHTML = tamagocci.maxWeight;
+	        	document.getElementById("happiness").innerHTML = tamagocci.happiness;
+        	}
+
+        	function update() {
+        		displayOrRefreshTamagocciInfo();
+        		displayOrRefreshTamagocciPicture();
+        	}
+
+        	function stopTheGame() {
+        		eatButton.onclick = null;
+        		playButton.onclick = null;
+        		clearInterval(intervalID);
+        	}
+        };
+    </script>
+</head>
+<body>
+    <div id="tamagocci">
+        <h1>Tamagocci</h1>
+    	<img id="picture" />
+    	<div id="information">
+            <strong>Age:</strong><span id="age"></span>
+            <strong>Min Weight:</strong><span id="minWeight"></span>
+            <strong>Weight:</strong><span id="weight"></span>
+            <strong>Max Weight:</strong><span id="maxWeight"></span>
+            <strong>Happiness:</strong><span id="happiness"></span>
+        </div>
+    	<section id="actions">
+            <strong>Actions</strong>
+            <button id="eat-button">Give food</button>
+    	    <button id="play-button">Entertain</button>
+        </section>
+    </div>
+</body>
+</html>

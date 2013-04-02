@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title></title>
+		<style>
+
+			ol { background-color: #ccc; height: 300px; }
+			ul li { background-color: #ff00ff; height: 30px; }
+
+		</style>
+	</head>
+	<body>
+		
+		<ul>
+			<li draggable="true" id="li-1">Element 1</li>
+			<li draggable="true" id="li-2">Element 2</li>
+			<li draggable="true" id="li-3">Element 3</li>
+			<li draggable="true" id="li-4">Element 4</li>
+			<li draggable="true" id="li-5">Element 5</li>
+		</ul>
+		
+		<ol id="dropzone">
+		</ol>
+
+
+		<script type="text/javascript">
+
+			var listItems = document.querySelectorAll('li[draggable]');
+			var listItem;
+
+			for (var i = 0; i < listItems.length; i++)
+			{
+				listItem = listItems[i];
+				listItem.addEventListener('dragstart', function(event) {
+					event.dataTransfer.setData("text", this.id);
+				});
+			}
+
+			var dropzone = document.getElementById('dropzone');
+			dropzone.addEventListener('dragover', function(event) {
+				event.preventDefault();
+			});
+
+			dropzone.addEventListener('drop', function(event) {
+				var listItemId = event.dataTransfer.getData("text");
+				var listItem = document.getElementById(listItemId);
+				
+				this.appendChild(listItem);
+			});
+
+		</script>
+	</body>
+</html>

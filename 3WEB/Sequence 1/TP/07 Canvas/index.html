@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Canvas is Nice</title>
+		
+		<style>
+			figure { float: left; width: 400px; }
+			canvas { float: left; }
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400px" height="400px"></canvas>
+		
+		<script type="text/javascript">
+
+			window.addEventListener('load', function(event) {
+
+				var canvas = document.getElementById('canvas');
+				var ctx = canvas.getContext('2d');
+
+				// Head
+				ctx.fillStyle = "yellow";
+				ctx.strokeStyle = "black";
+				ctx.lineWidth = 2;
+				ctx.arc(200, 200, 150, Math.PI*2, 0, false);
+				ctx.stroke();
+				ctx.fill();
+
+				// Eyes
+				ctx.moveTo(90, 170);
+				ctx.lineTo(130, 120);
+				ctx.moveTo(130, 120);
+				ctx.lineTo(170, 170);
+
+				ctx.moveTo(230, 170);
+				ctx.lineTo(270, 120);
+				ctx.moveTo(270, 120);
+				ctx.lineTo(310, 170);
+
+				ctx.stroke();
+
+				// Mouth
+				ctx.fillStyle = "black";
+				ctx.beginPath();
+				ctx.moveTo(180, 280);
+				ctx.quadraticCurveTo(200, 180, 220, 280);
+				ctx.closePath();
+				ctx.stroke();
+				ctx.fill();
+
+				ctx.beginPath();
+				ctx.moveTo(180, 280);
+				ctx.quadraticCurveTo(200, 380, 220, 280);
+				ctx.closePath();
+				ctx.stroke();
+				ctx.fill();
+
+				// Txt
+				ctx.font = "normal 20px Verdana";
+				ctx.fillStyle = "brown";
+				ctx.fillText("Yoohoo !", 220, 240);
+
+			});
+
+		</script>
+	</body>
+</html>

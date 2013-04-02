@@ -1,0 +1,7 @@
+body 				{ margin: 0; }
+div#content 		{ width: 900px; margin: auto; }
+h1 					{ text-align: center; }
+section 			{ border-radius: 15px; background-color: #eee; padding: 10px; float: left; width: 420px; min-height: 200px; }
+section.active 		{ background-color: #8eec92; }
+section#tweets	 	{ margin-right: 10px; }
+article 			{ border-radius: 15px; background-color: #a8d8e6; padding: 10px; margin: 5px; }

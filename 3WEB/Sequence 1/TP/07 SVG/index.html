@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>SVG is Nice</title>
+		
+		<style>
+			figure { float: left; margin-right: 0; width: 370px; }
+			svg { width: 400px; height: 400px; }
+			img { float: left; padding-top: 25px; }
+		</style>
+	</head>
+	<body>
+		
+		
+		<figure>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<defs>
+					<filter id="gaussian1">
+						<feGaussianBlur stdDeviation="5" />
+					</filter>
+				</defs>
+				
+				<!-- Head -->
+				<circle cx="200" cy="200" r="150" fill="yellow" stroke="black" />
+				
+				<!-- Eyes -->
+				<polyline points="90,170 130,120 170,170" stroke="black" stroke-width="2" fill="none" />
+				<polyline points="230,170 270,120 310,170" stroke="black" stroke-width="2" fill="none" />
+				
+				<!-- Mouth & Cheekbones -->
+				<circle cx="120" cy="230" r="30" fill="pink" filter="url(#gaussian1)" />
+				<ellipse cx="200" cy="280" rx="20" ry="60" fill="black" />
+				<circle cx="280" cy="230" r="30" fill="pink" filter="url(#gaussian1)" />
+				
+				<!-- Text -->
+				<text x="220" y="230" fill="brown" style="font-size: 1.2em;">Yoohoo !</text>
+				
+			</svg>
+			<figcaption>Smiley !</figcaption>
+		</figure>
+
+		<img src="smiley.png" alt="Smiley !" />
+	</body>
+</html>

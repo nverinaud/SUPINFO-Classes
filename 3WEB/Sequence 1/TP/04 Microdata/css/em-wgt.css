@@ -1,0 +1,8 @@
+
+#em-wgt { display: block; }
+#em-wgt label { text-align: right; display: block; }
+#em-wgt section { width: 100%; }
+#em-wgt fieldset { width: 100%; }
+#em-wgt table { width: 100%; }
+#em-wgt input:not([type="submit"]) { width: 100%; }
+#em-wgt input[type="submit"] { margin: auto; display: block; }

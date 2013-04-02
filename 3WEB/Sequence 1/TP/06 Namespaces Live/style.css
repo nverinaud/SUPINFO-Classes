@@ -1,0 +1,65 @@
+
+@namespace url('http://www.ns.com/ns/Breakfast');
+@namespace waf url('http://www.ns.com/ns/Waffles');
+
+@keyframes waffleAnimation {
+	0%		{ background-color: white; color: brown; }
+	50%		{ background-color: brown; color: white; }
+	100% 	{ background-color: white; color: brown; }
+}
+
+@-webkit-keyframes waffleAnimation {
+	0%		{ background-color: white; color: brown; }
+	50%		{ background-color: brown; color: white; }
+	100% 	{ background-color: white; color: brown; }
+}
+
+waf|Waffle:hover {
+	animation: waffleAnimation 5s infinite;
+	-webkit-animation: waffleAnimation 5s infinite;
+}
+
+food, waf|Waffle {
+	display: block;
+	border: 1px solid black;
+	float: left;
+	width: 180px;
+	height: 230px;
+	overflow: scroll;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+}
+
+name {
+	text-align: center;
+	padding: 5px;
+	margin: 10px;
+	display: block;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+price {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	-webkit-transform: rotate(-30deg);
+}
+
+
+*|calories, price, description {
+	display: block;
+}
+
+*|calories {
+	text-align: right;
+	padding-top: 5px;
+}
+
+*|calories:after {
+	content: " calories";
+}

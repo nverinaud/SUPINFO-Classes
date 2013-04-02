@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Verdana", "Arial", serif;
+}
+
+#tamagocci {
+	width: 250px;
+	margin: 0 auto;
+	border: 1px black solid;
+	padding: 20px 40px;
+}
+
+#tamagocci h1 {
+	text-align: center;
+	margin-top: 0;
+}
+
+#tamagocci img {
+	vertical-align: top;
+	border: 1px black solid;
+	padding: 5px;
+	box-shadow: 1px 1px 3px grey;
+}
+
+#information {
+	display: inline-block;
+	width: 180px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#information strong {
+	display: inline-table;
+	width: 130px;
+}
+#information span {
+	position: absolute;
+	right: 0;
+	margin: 0;
+}
+
+#actions {
+	padding-top: 10px;
+	border-top: 1px black solid;
+	margin-top: 10px;
+	line-height: 23px;
+	text-align: center;
+}
+
+#actions button {
+	margin: 0 10px;
+	padding: 5px;
+}

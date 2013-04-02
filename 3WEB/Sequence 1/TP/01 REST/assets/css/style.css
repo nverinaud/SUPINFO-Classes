@@ -1,0 +1,9 @@
+table.well 						{ border: 1px solid black; border-collapse: collapse; width: 600px; margin: auto; }
+table.well tr, table.well td 	{ border: 1px solid black; padding: 1em; }
+table.well thead 				{ text-align: center; font-weight: bold;}
+
+#loader { margin: 1em auto; display: block; visibility: hidden; }
+
+form table 	{ border: 1px solid black; border-collapse: collapse; }
+form tr 	{ border: 1px dotted black; }
+form td 	{ padding: 1em; }

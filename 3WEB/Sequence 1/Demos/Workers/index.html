@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		
+<script type="text/javascript">
+
+var worker = new Worker('worker.js');
+
+worker.onmessage = function(event) {
+	console.log(event.data);
+};
+
+worker.postMessage("");
+
+</script>	
+		
+	</body>
+</html>

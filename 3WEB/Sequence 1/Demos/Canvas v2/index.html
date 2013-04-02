@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Canvas is Nice</title>
+		
+		<style>
+			figure { float: left; width: 400px; }
+			canvas { float: left; }
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400px" height="400px"></canvas>
+		
+		<script type="text/javascript">
+
+			window.addEventListener('load', function(event) {
+
+				var canvas = document.getElementById('canvas');
+				var ctx = canvas.getContext('2d');
+
+				// Head
+				ctx.fillStyle = "yellow";
+				ctx.strokeStyle = "black";
+				ctx.lineWidth = 2;
+				ctx.beginPath();
+				ctx.arc(200, 200, 150, Math.PI*2, 0, false);
+				ctx.closePath();
+				ctx.stroke();
+				ctx.fill();
+
+				ctx.beginPath();
+				ctx.arc(230, 200, 50, Math.PI*2, 0, false);
+				ctx.closePath();
+				ctx.stroke();
+				ctx.fill();
+
+			});
+
+		</script>
+	</body>
+</html>

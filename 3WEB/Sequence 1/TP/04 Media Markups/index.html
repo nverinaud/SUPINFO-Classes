@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Media Player</title>
+		<style type="text/css">
+			h1 { text-align: center; }
+			article { width: 900px;	margin: auto; }
+			video { width: 100%; }
+			input[name="video_url"] { width: 300px; margin: 0 10px; }
+		</style>
+	</head>
+	<body>
+		
+		<h1>Media Player</h1>
+
+		<article>
+			<video id="player" controls>
+				Your browser is too old !!
+			</video>
+			<form action="" id="videoLoader">
+				<fieldset>
+					<legend>Video</legend>
+					<table>
+						<tr>
+							<td><label for="video_url">Enter your video URL:</label></td>
+							<td><input type="url" placeholder="http://" name="video_url" id="video_url" /></td>
+							<td><input type="submit" value="Load !" /></td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		</article>
+
+
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
