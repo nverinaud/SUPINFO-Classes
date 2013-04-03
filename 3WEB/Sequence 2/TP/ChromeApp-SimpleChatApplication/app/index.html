@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Simple Chat Application</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/jquery.mustache.js"></script>
+	<script src="assets/js/mustache.js"></script>
+</head>
+<body>
+	
+	<div class="top-head">
+		<button id="status" class="btn btn-danger">Offline</button>
+	</div>
+	
+	<div id="chatroom">
+		<p class="well well-small message" id="message-template"><span>{{date}}</span>{{message}}</p>
+	</div>
+
+	<form action="/messages" method="post" id="new-message-form" class="form-search">
+			<div class="input-append">
+				<input type="text" id="msg-field" name="msg" placeholder="Say something..." class="search-query span11" />
+				<button type="submit" class="btn btn-primary">Say It !</button>
+			</div>
+	</form>
+
+	<script src="assets/js/socket.io.min.js"></script>
+	<script src="assets/js/client.js"></script>
+	
+</body>
+</html>

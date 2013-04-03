@@ -1,0 +1,14 @@
+{
+  "name": "SUPINFO Courses",
+  "version": "1",
+  "icons": { "48": "icon48.png", "128": "icon128.png" },
+  "app": {
+    "urls": [
+      "http://courses.supinfo.com"
+    ],
+    "launch": {
+      "web_url": "http://courses.supinfo.com"
+    }
+  },
+  "manifest_version": 2
+}
