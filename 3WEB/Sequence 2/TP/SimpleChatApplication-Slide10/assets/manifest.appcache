@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# 1.0
+
+CACHE:
+/views/index.html
+/assets/css/bootstrap.min.css
+/assets/css/style.css
+/socket.io/socket.io.js
+/assets/js/client.js
+http://code.jquery.com/jquery-1.9.1.min.js
+https://raw.github.com/jonnyreeves/jquery-Mustache/master/jquery.mustache.js
+https://raw.github.com/janl/mustache.js/master/mustache.js
+
+NETWORK:
+*
