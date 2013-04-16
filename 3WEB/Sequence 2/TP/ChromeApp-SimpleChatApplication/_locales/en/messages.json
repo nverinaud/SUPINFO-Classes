@@ -1,0 +1,18 @@
+{
+	"Send" : {
+		"message" : "Send",
+		"description" : "Text shown on the send button."
+	},
+	"Online" : {
+		"message" : "Online",
+		"description" : "Text shown on the status button when the server is reachable."
+	},
+	"Offline" : {
+		"message" : "Offline",
+		"description" : "Text shown on the status button when the server is not reachable."
+	},
+	"Say_something" : {
+		"message" : "Say something...",
+		"description" : "Placeholder text for the message field."
+	}
+}

@@ -12,5 +12,6 @@
     "storage",
     "notifications"
   ],
+  "default_locale": "en",
   "manifest_version": 2
 }

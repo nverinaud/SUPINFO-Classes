@@ -5,15 +5,20 @@
 
 		$.mobile.defaultPageTransition = 'slide';
 
-		var $summaryPage = $("#summary");
-		var $summaryPageContent = $("#summary div[data-role='content']");
-		var $summaryPageTitle = $('#summary div:first-child h1');
-		var $listView = $("#rss-feed-list-view");
+		var $summaryPage = $("#summary"),
+			$summaryPageContent = $("#summary div[data-role='content']"),
+			$summaryPageTitle = $('#summary div:first-child h1'),
+			$listView = $("#rss-feed-list-view");
+
+		// Don't load the summary page with empty values instead reload the index
+		if (window.location.hash === "#summary")
+			window.location.href = "/";
 
 		$('a').on('click', function(event) {
 
-			var $this = $(this);
-			var rssURL = $this.attr('data-rss-feed-url');
+			var $this 		= $(this),
+				rssURL 		= $this.attr('data-rss-feed-url'),
+				proxyURL 	= window.location.href + "rss-proxy?rss_feed=" + rssURL;
 
 			/* Update title */
 			$summaryPageTitle.html($this.text());
@@ -24,7 +29,7 @@
 
 			/* Ajax call */
 			$.ajax({
-				url: rssURL,
+				url: proxyURL,
 				accepts: 'text/xml',
 				success: function(data, textStatus, jqXHR) {
 					console.log('Text status: ' + textStatus);

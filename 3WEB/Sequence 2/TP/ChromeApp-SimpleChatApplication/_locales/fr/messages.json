@@ -1,0 +1,18 @@
+{
+	"Send" : {
+		"message" : "Envoyer",
+		"description" : "Texte affiché sur le bouton d'envoi."
+	},
+	"Online" : {
+		"message" : "En Ligne",
+		"description" : "Texte affiché sur le bouton de status quand le serveur est accessible."
+	},
+	"Offline" : {
+		"message" : "Hors Ligne",
+		"description" : "Texte affiché sur le bouton de status quand le serveur est inaccessible."
+	},
+	"Say_something" : {
+		"message" : "Exprimez-vous...",
+		"description" : "Texte de substitution affiché dans le champs de nouveau message."
+	}
+}

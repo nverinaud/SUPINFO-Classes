@@ -6,8 +6,16 @@
 		$chatroom = $('#chatroom'),
 		$messageTemplate = $('#message-template').removeAttr('id'),
 		messageTemplate = $chatroom.html(),
-		$statusEl = $('#status');
+		$statusEl = $('#status'),
+		$sayItButton = $('#say-it-button'),
+		$msgField = $('#msg-field');
 
+	// i18n
+	$sayItButton.text(chrome.i18n.getMessage('Send'));
+	$msgField.attr('placeholder', chrome.i18n.getMessage('Say_something'));
+	$statusEl.text(chrome.i18n.getMessage('Offline'));
+
+	// Mustache template
 	$messageTemplate.remove();
 	$.Mustache.add('message-template', messageTemplate);
 
@@ -38,7 +46,7 @@
 		messages = [];
 		
 		// Update state
-		$statusEl.text('Online');
+		$statusEl.text(chrome.i18n.getMessage('Online'));
 		$statusEl.removeClass('btn-danger').addClass('btn-success');
 		isOnline = true;
 
@@ -50,7 +58,7 @@
 	});
 
 	socket.on('disconnect', function() {
-		$statusEl.text('Offline');
+		$statusEl.text(chrome.i18n.getMessage('Offline'));
 		$statusEl.removeClass('btn-success').addClass('btn-danger');
 		isOnline = false;
 	});
