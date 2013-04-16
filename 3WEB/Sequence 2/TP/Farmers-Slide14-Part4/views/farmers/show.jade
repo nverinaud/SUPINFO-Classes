@@ -1,0 +1,30 @@
+doctype 5
+html(lang="en")
+	head
+		title Farmers
+		script(src="http://code.jquery.com/jquery-1.9.1.min.js")
+		link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css", rel="stylesheet")
+		link(href="/public/assets/css/style.css", rel="stylesheet")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body
+
+		#farmer-profile.well
+			img(src="#{farmer.avatarURL}", alt="Avatar for #{farmer.firstname}")
+			h2 #{farmer.firstname} #{farmer.lastname}
+			p #{farmer.email}
+
+			if (farmer.farms.length <= 0)
+				p No farms yet.
+			else
+				table.table.table-bordered.table-condensed.table-hover#farms-list
+					thead
+						tr
+							th #
+							th Name
+					tbody
+					each farm in farmer.farms
+						tr
+							td #{farm._id}
+							td #{farm.name}
+
+			a.btn.btn-primary(href="/farms/new") Create a new farm

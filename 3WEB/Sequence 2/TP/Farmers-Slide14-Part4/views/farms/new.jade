@@ -1,0 +1,36 @@
+doctype 5
+html(lang="en")
+	head
+		title Farmers
+		script(src="http://code.jquery.com/jquery-1.9.1.min.js")
+		link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css", rel="stylesheet")
+		link(href="/public/assets/css/style.css", rel="stylesheet")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body
+		.page-header
+			h1 Farms - New
+
+		if (error.message)
+			.alert.alert-error
+				strong Error! 
+				| #{error.message}
+
+		form.well.form-horizontal(action="/farms", method="post", id="new-farm-form")
+			fieldset
+				legend New Farm
+			
+				.control-group
+					label.control-label(for="name") Name
+					.controls
+						input(type="text", name="farm[name]", id="name", value="#{error.farm.name}")
+
+				if (farmers)
+					.control-group
+						label.control-label(for="farmer") Farmer
+						.controls
+							select(name="farm[farmer]", id="farmer")
+								each farmer in farmers
+									option(value="#{farmer._id}") #{farmer.firstname} #{farmer.lastname}
+
+				.form-actions
+					button.btn.btn-primary(type="submit") Create

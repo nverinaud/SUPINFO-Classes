@@ -1,0 +1,22 @@
+body 
+{
+	padding: 10px;
+}
+
+#farmers-list img
+{
+	width: 40px;
+}
+
+#farmers-list td,
+#farmers-list th
+{
+	vertical-align: middle;
+}
+
+#farmer-profile img
+{
+	float: left;
+	height: 80px;
+	margin-right: 10px;
+}

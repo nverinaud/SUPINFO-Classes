@@ -1,0 +1,15 @@
+body 
+{
+	padding: 10px;
+}
+
+#farmers-list img
+{
+	width: 40px;
+}
+
+#farmers-list td,
+#farmers-list th
+{
+	vertical-align: middle;
+}
