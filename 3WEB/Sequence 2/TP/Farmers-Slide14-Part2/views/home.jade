@@ -1,0 +1,44 @@
+doctype 5
+html(lang="en")
+	head
+		title Farmers
+		script(src="http://code.jquery.com/jquery-1.9.1.min.js")
+		link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css", rel="stylesheet")
+		link(href="/public/assets/css/style.css", rel="stylesheet")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body
+		.page-header
+			h1 Farmers
+
+		if (error.message)
+			.alert.alert-error
+				strong Error! 
+				| #{error.message}
+
+		form.well.form-horizontal(action="/farmers", method="post", id="new-farmer-form")
+			fieldset
+				legend New Farmer
+			
+				.control-group
+					label.control-label(for="email") Email
+					.controls
+						input(type="text", name="farmer[email]", id="email", value="#{error.farmer.email}")
+				
+				.control-group
+					label.control-label(for="firstname") Firstname
+					.controls
+						input(type="text", name="farmer[firstname]", id="firstname", value="#{error.farmer.firstname}")
+
+				.control-group
+					label.control-label(for="lastname") Lastname
+					.controls
+						input(type="text", name="farmer[lastname]", id="lastname", value="#{error.farmer.lastname}")
+
+				.form-actions
+					button.btn.btn-primary(type="submit") Register
+
+		if (farmer)
+			p Hello <strong>#{farmer.firstname} #{farmer.lastname}</strong> (#{farmer.email})
+			img(src="#{farmer.avatarURL}", alt="Farmer avatar")
+
+		script(src="/public/assets/js/client.js")
