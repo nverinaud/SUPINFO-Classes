@@ -1,0 +1,39 @@
+doctype 5
+html(lang="en")
+	head
+		title Farmers
+		script(src="http://code.jquery.com/jquery-1.9.1.min.js")
+		link(href="/public/assets/css/style.css", rel="stylesheet", type="text/css")
+	body
+		h1 Farmers
+
+		form(action="/farmers", method="post", id="new-farmer-form")
+			h4 New Farmer
+			table
+				tr
+					td
+						label(for="email") Email:
+					td
+						input(type="text", name="user[email]", id="email")
+				tr
+					td
+						label(for="firstname") Firstname:
+					td
+						input(type="text", name="user[firstname]", id="firstname")
+				tr
+					td
+						label(for="lastname") Lastname:
+					td
+						input(type="text", name="user[lastname]", id="lastname")
+				tr
+					td
+					td
+						input(type="submit", value="Register")
+
+		if (user)
+			p Hello	
+				strong 	#{user.firstname} #{user.lastname} 
+				| 		(#{user.email})
+			img(src="#{user.avatarURL}", alt="User avatar")
+
+		script(src="/public/assets/js/client.js")
