@@ -14,10 +14,12 @@
 {
 	return self->_name;
 }
+
 - (int)age
 {
 	return self->_age;
 }
+
 - (int)maxAge
 {
 	return self->_maxAge;
@@ -27,10 +29,12 @@
 {
 	self->_name = value;
 }
+
 - (void)setAge:(int)value
 {
 	self->_age = value;
 }
+
 - (void)setMaxAge:(int)value
 {
 	self->_maxAge = value;

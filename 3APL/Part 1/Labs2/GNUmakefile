@@ -9,7 +9,7 @@ endif
 
 include $(GNUSTEP_MAKEFILES)/common.make
 
-TOOL_NAME = HelloWorld
+TOOL_NAME = zoo
 HelloWorld_OBJC_FILES = main.m Animal.m
 HelloWorld_HEADERS = Animal.h
 
