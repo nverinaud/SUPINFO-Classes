@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface Animal : NSObject
+{
+@protected
+	NSString *_name;
+	int _age;
+	int _maxAge;
+}
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) int age;
