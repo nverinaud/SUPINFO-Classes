@@ -7,18 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Animal.h"
+#import "ZooKit.h"
 
 int main(int argc, const char * argv[])
 {
+	srand((unsigned)time(NULL));
+	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 			
-	Animal *animal = [[Animal alloc] init];
-	animal.name = @"Chaton mignon"; // <=> [animal setName:@"Chaton mignon"];
-	animal.age = 5; // <=> [animal setAge:5];
+	Zoo *zoo = [[Zoo alloc] init];
+	zoo.director = [[ZooDirector alloc] initWithFirstname:@"Indiana" andLastname:@"Johns"];
 	
-	NSLog(@"%@ Nom : %@, Age : %d", animal, animal.name, animal.age);
-	   
+	[zoo addAnimal:[[Dog alloc] initWithName:@"Pluto" andAge:5]];
+	[zoo addAnimal:[[Donkey alloc] initWithName:@"Donkey Kong" andAge:10]];
+	[zoo addAnimal:[[Cow alloc] initWithName:@"Milka" andAge:2]];
+	[zoo addAnimal:[[Monkey alloc] initWithName:@"Diddy Kong" andAge:7]];
+	[zoo addAnimal:[[Cat alloc] initWithName:@"Garfield" andAge:3]];
+	[zoo addAnimal:[[Lion alloc] initWithName:@"Simba" andAge:6]];
+	
+	NSLog(@"== Feed animals... ==");
+	[zoo feedAnimals];
+	
+	NSLog(@"== Description Zoo... ==");
+	NSLog(@"%@", zoo);
+	
+	while ([zoo getOlder]);
+	NSLog(@"Ze director has quit the zoo at seniority: %d", [zoo.director seniority]);
+	
 	[pool drain];
 	
     return 0;
