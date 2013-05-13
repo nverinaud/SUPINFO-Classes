@@ -10,34 +10,8 @@
 
 @implementation Animal
 
-- (NSString *)name
-{
-	return self->_name;
-}
-
-- (int)age
-{
-	return self->_age;
-}
-
-- (int)maxAge
-{
-	return self->_maxAge;
-}
-
-- (void)setName:(NSString *)value
-{
-	self->_name = value;
-}
-
-- (void)setAge:(int)value
-{
-	self->_age = value;
-}
-
-- (void)setMaxAge:(int)value
-{
-	self->_maxAge = value;
-}
+@synthesize name = _name;
+@synthesize age = _age;
+@synthesize maxAge = _maxAge;
 
 @end

@@ -11,17 +11,13 @@
 
 int main(int argc, const char * argv[])
 {
-
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	    
-	// My code		
-	Animal *animal;
-	animal = [[Animal alloc] init];
-	[animal setName:@"Chaton mignon"];
-	[animal setAge:5];
-	[animal setMaxAge:20];
+			
+	Animal *animal = [[Animal alloc] init];
+	animal.name = @"Chaton mignon"; // <=> [animal setName:@"Chaton mignon"];
+	animal.age = 5; // <=> [animal setAge:5];
 	
-	NSLog(@"%@ Nom : %@, Age : %d", animal, [animal name], [animal age]);
+	NSLog(@"%@ Nom : %@, Age : %d", animal, animal.name, animal.age);
 	   
 	[pool drain];
 	
