@@ -13,6 +13,7 @@
 @protected
 	NSString *_firstname;
 	NSString *_lastname;
+	int _seniority;
 }
 
 @property (nonatomic, copy) NSString *firstname;

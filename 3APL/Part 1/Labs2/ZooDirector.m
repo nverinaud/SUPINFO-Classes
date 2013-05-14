@@ -13,6 +13,7 @@
 
 @synthesize firstname = _firstname;
 @synthesize lastname = _lastname;
+@synthesize seniority = _seniority;
 
 - (id)initWithFirstname:(NSString *)firstname andLastname:(NSString *)lastname
 {
