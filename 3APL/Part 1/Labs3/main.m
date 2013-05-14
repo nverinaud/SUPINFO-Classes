@@ -48,9 +48,8 @@ int main(int argc, const char * argv[])
 	NSLog(@"Director seniority: %d", zoo.director.seniority);
 //	zoo.director.salary = 3000; // Compilation error
 //	zoo.director->_salary = 3000; // Compilation error
-	id director = zoo.director;
-	[director setSalary:3000]; // Compilation warning but it works ! I've hack this class youhou!
-	NSLog(@"Director salary: %d", (int)[director salary]); // Compilation warning
+	[zoo.director setSalary:3000]; // Compilation warning but it works ! I've hack this class youhou!
+	NSLog(@"Director salary: %d", (int)[zoo.director salary]); // Compilation warning
 	
 	// Dummy check
 	NSLog(@"== Dummy check... ==");

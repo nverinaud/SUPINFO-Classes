@@ -19,6 +19,7 @@
 
 - (BOOL)isDead
 {
+	// super here represents : mother class of Animal, NSObject
 	if ([self isMemberOfClass:Dog.class])
 		return NO;
 	
@@ -26,3 +27,23 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
