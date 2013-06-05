@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="kfs-Ia-vVf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ma9-cP-nh5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="kfs-Ia-vVf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Qc-xz-a6L">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XjI-Fq-ufs" kind="relationship" relationship="rootViewController" id="AFc-pM-DG7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLh-7R-TAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1267" y="40"/>
+        </scene>
+        <!--My Table View Controller - Welcome-->
+        <scene sceneID="Khp-7L-n2d">
+            <objects>
+                <tableViewController id="XjI-Fq-ufs" customClass="MyTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qac-7K-fU4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MyCustomCell" rowHeight="109" id="aRZ-xc-orc" customClass="MyCustomCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="108"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="B5A-3D-vNr">
+                                            <rect key="frame" x="189" y="10" width="103" height="87"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y4a-XI-L25">
+                                            <rect key="frame" x="0.0" y="10" width="182" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="2" id="9Ep-vK-23g">
+                                            <rect key="frame" x="88" y="40" width="94" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <connections>
+                                                <action selector="stepperValueChanged:" destination="aRZ-xc-orc" eventType="valueChanged" id="9VT-96-4nd"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="00D-kI-zYu">
+                                            <rect key="frame" x="14" y="43" width="67" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="myImageView" destination="B5A-3D-vNr" id="mRq-f0-qei"/>
+                                    <outlet property="stepper" destination="9Ep-vK-23g" id="CBU-2z-qBY"/>
+                                    <outlet property="stepperLabel" destination="00D-kI-zYu" id="od4-ZV-sGW"/>
+                                    <outlet property="titleLabel" destination="Y4a-XI-L25" id="47n-X2-Veh"/>
+                                    <segue destination="XWe-wN-tDG" kind="push" identifier="PushSegue" id="RGk-s9-R8m"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XjI-Fq-ufs" id="b3x-Uz-GLs"/>
+                            <outlet property="delegate" destination="XjI-Fq-ufs" id="zoi-Z8-hbX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Welcome" id="SIA-qg-5bU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKh-40-oCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752" y="39"/>
+        </scene>
+        <!--Drag View Controller - GG-->
+        <scene sceneID="mgF-NI-ZEO">
+            <objects>
+                <viewController id="XWe-wN-tDG" customClass="DragViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bI5-Na-zzI">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" image="banana.png" id="nKO-mE-KPk">
+                                <rect key="frame" x="116" y="40" width="88" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kR0-Qt-bys" appends="YES" id="Bix-Vl-itD"/>
+                                    <outletCollection property="gestureRecognizers" destination="Q3M-YU-XY9" appends="YES" id="teZ-0O-hcC"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" image="cherry.png" id="GKs-ta-n2F">
+                                <rect key="frame" x="20" y="194" width="88" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WKK-71-Gp6" appends="YES" id="KBh-QN-iBt"/>
+                                    <outletCollection property="gestureRecognizers" destination="4r0-tS-W4q" appends="YES" id="zYY-Db-6Lj"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95150500260000004" green="0.3975626095" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LUY-r9-C79" appends="YES" id="wgj-F6-Tq4"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="GG" id="6U8-C2-bLz"/>
+                    <connections>
+                        <outletCollection property="imageViews" destination="nKO-mE-KPk" id="EGL-1g-mWG"/>
+                        <outletCollection property="imageViews" destination="GKs-ta-n2F" id="8BQ-4f-j8H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPn-hm-yQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.30000000000000004" id="kR0-Qt-bys" userLabel="Long Press Gesture Recognizer - Banana">
+                    <connections>
+                        <action selector="longPressed:" destination="XWe-wN-tDG" id="cqg-nS-vpg"/>
+                        <outlet property="delegate" destination="XWe-wN-tDG" id="Z5V-0y-Sg0"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Q3M-YU-XY9" userLabel="Pan Gesture Recognizer - Banana">
+                    <connections>
+                        <action selector="panned:" destination="XWe-wN-tDG" id="opi-fi-aba"/>
+                        <outlet property="delegate" destination="XWe-wN-tDG" id="9Re-LF-vYR"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="WKK-71-Gp6" userLabel="Pan Gesture Recognizer - Cherry">
+                    <connections>
+                        <action selector="panned:" destination="XWe-wN-tDG" id="Rz3-rD-RcK"/>
+                        <outlet property="delegate" destination="XWe-wN-tDG" id="zcF-8k-W6a"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.30000000000000004" id="4r0-tS-W4q" userLabel="Long Press Gesture Recognizer - Cherry">
+                    <connections>
+                        <action selector="longPressed:" destination="XWe-wN-tDG" id="7Yb-ck-u6b"/>
+                        <outlet property="delegate" destination="XWe-wN-tDG" id="by4-A2-7CQ"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <rotationGestureRecognizer id="LUY-r9-C79">
+                    <connections>
+                        <action selector="rotate:" destination="XWe-wN-tDG" id="ovs-Dp-g2Y"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-199" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="banana.png" width="123" height="123"/>
+        <image name="cherry.png" width="123" height="123"/>
+    </resources>
+    <classes>
+        <class className="DragViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DragViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="longPressed:" candidateClass="UILongPressGestureRecognizer"/>
+                <relationship kind="action" name="panned:" candidateClass="UIPanGestureRecognizer"/>
+                <relationship kind="action" name="rotate:" candidateClass="UIRotationGestureRecognizer"/>
+                <relationship kind="outletCollection" name="imageViews" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="MyCustomCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyCustomCell.h"/>
+            <relationships>
+                <relationship kind="action" name="stepperValueChanged:" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="myImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="stepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="stepperLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyTableViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
