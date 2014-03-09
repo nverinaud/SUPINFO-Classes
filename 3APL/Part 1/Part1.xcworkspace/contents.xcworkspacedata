@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Labs">
+      <FileRef
+         location = "group:Labs1/Labs1.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs2/Labs2.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs3/Labs3.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs4/Labs4.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs4.3/Labs4.3.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs4.4/Labs4.4.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs5/Labs5.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs6/Labs6.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs7.2/Labs7.2.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Labs7.3/Labs7.3.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Demo">
+      <FileRef
+         location = "group:DemoMemoryManagement/DemoMemoryManagement.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DemoFastEnumeration/DemoFastEnumeration.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DemoBlocks/DemoBlocks.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DemoProtocol/DemoProtocol.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03487F0017476E6600B9C41E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03487EFF17476E6600B9C41E /* Foundation.framework */; };
+		03487F0317476E6600B9C41E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03487F0217476E6600B9C41E /* main.m */; };
+		034880681747755F00B9C41E /* apple.tiff in CopyFiles */ = {isa = PBXBuildFile; fileRef = 034880671747752D00B9C41E /* apple.tiff */; };
+		03C109A01748BB0000844EB3 /* libtiff.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C1099F1748BB0000844EB3 /* libtiff.dylib */; };
+		03C109A5174914CF00844EB3 /* RealTIFFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C109A4174914CF00844EB3 /* RealTIFFImage.m */; };
+		03C109A817491CE500844EB3 /* TIFFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C109A717491CE500844EB3 /* TIFFImage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03487EFA17476E6600B9C41E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				034880681747755F00B9C41E /* apple.tiff in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03487EFC17476E6600B9C41E /* mytiffdump */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mytiffdump; sourceTree = BUILT_PRODUCTS_DIR; };
+		03487EFF17476E6600B9C41E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03487F0217476E6600B9C41E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03487F0517476E6600B9C41E /* Labs4.3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Labs4.3-Prefix.pch"; sourceTree = "<group>"; };
+		034880671747752D00B9C41E /* apple.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = apple.tiff; sourceTree = "<group>"; };
+		03C1099F1748BB0000844EB3 /* libtiff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtiff.dylib; path = ../../../../../../../../../../../usr/local/lib/libtiff.dylib; sourceTree = "<group>"; };
+		03C109A11748BB7C00844EB3 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		03C109A21748BD2200844EB3 /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		03C109A3174914CF00844EB3 /* RealTIFFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealTIFFImage.h; sourceTree = "<group>"; };
+		03C109A4174914CF00844EB3 /* RealTIFFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealTIFFImage.m; sourceTree = "<group>"; };
+		03C109A617491CE500844EB3 /* TIFFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIFFImage.h; sourceTree = "<group>"; };
+		03C109A717491CE500844EB3 /* TIFFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIFFImage.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03487EF917476E6600B9C41E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03487F0017476E6600B9C41E /* Foundation.framework in Frameworks */,
+				03C109A01748BB0000844EB3 /* libtiff.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03487EF317476E6600B9C41E = {
+			isa = PBXGroup;
+			children = (
+				03C1099F1748BB0000844EB3 /* libtiff.dylib */,
+				03487F0117476E6600B9C41E /* Labs4.3 */,
+				03487EFE17476E6600B9C41E /* Frameworks */,
+				03487EFD17476E6600B9C41E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03487EFD17476E6600B9C41E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03487EFC17476E6600B9C41E /* mytiffdump */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03487EFE17476E6600B9C41E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03487EFF17476E6600B9C41E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03487F0117476E6600B9C41E /* Labs4.3 */ = {
+			isa = PBXGroup;
+			children = (
+				03C109A11748BB7C00844EB3 /* README.txt */,
+				03C109A21748BD2200844EB3 /* GNUmakefile */,
+				034880671747752D00B9C41E /* apple.tiff */,
+				03487F0217476E6600B9C41E /* main.m */,
+				03C109A3174914CF00844EB3 /* RealTIFFImage.h */,
+				03C109A4174914CF00844EB3 /* RealTIFFImage.m */,
+				03C109A617491CE500844EB3 /* TIFFImage.h */,
+				03C109A717491CE500844EB3 /* TIFFImage.m */,
+				03487F0417476E6600B9C41E /* Supporting Files */,
+			);
+			path = Labs4.3;
+			sourceTree = "<group>";
+		};
+		03487F0417476E6600B9C41E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03487F0517476E6600B9C41E /* Labs4.3-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03487EFB17476E6600B9C41E /* Labs4.3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03487F0A17476E6600B9C41E /* Build configuration list for PBXNativeTarget "Labs4.3" */;
+			buildPhases = (
+				03487EF817476E6600B9C41E /* Sources */,
+				03487EF917476E6600B9C41E /* Frameworks */,
+				03487EFA17476E6600B9C41E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Labs4.3;
+			productName = Labs4.3;
+			productReference = 03487EFC17476E6600B9C41E /* mytiffdump */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03487EF417476E6600B9C41E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nicolas VERINAUD";
+			};
+			buildConfigurationList = 03487EF717476E6600B9C41E /* Build configuration list for PBXProject "Labs4.3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03487EF317476E6600B9C41E;
+			productRefGroup = 03487EFD17476E6600B9C41E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03487EFB17476E6600B9C41E /* Labs4.3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03487EF817476E6600B9C41E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03487F0317476E6600B9C41E /* main.m in Sources */,
+				03C109A5174914CF00844EB3 /* RealTIFFImage.m in Sources */,
+				03C109A817491CE500844EB3 /* TIFFImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03487F0817476E6600B9C41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		03487F0917476E6600B9C41E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		03487F0B17476E6600B9C41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Labs4.3/Labs4.3-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = mytiffdump;
+			};
+			name = Debug;
+		};
+		03487F0C17476E6600B9C41E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Labs4.3/Labs4.3-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = mytiffdump;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03487EF717476E6600B9C41E /* Build configuration list for PBXProject "Labs4.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03487F0817476E6600B9C41E /* Debug */,
+				03487F0917476E6600B9C41E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03487F0A17476E6600B9C41E /* Build configuration list for PBXNativeTarget "Labs4.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03487F0B17476E6600B9C41E /* Debug */,
+				03487F0C17476E6600B9C41E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03487EF417476E6600B9C41E /* Project object */;
+}

@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03842E5118CC8C8600F0E3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03842E5018CC8C8600F0E3FA /* Foundation.framework */; };
+		03842E5818CC8C8600F0E3FA /* Labs2.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03842E5718CC8C8600F0E3FA /* Labs2.1 */; };
+		03842E7018CC8C9E00F0E3FA /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E5F18CC8C9E00F0E3FA /* Animal.m */; };
+		03842E7118CC8C9E00F0E3FA /* CatLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6118CC8C9E00F0E3FA /* CatLike.m */; };
+		03842E7218CC8C9E00F0E3FA /* Cow.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6318CC8C9E00F0E3FA /* Cow.m */; };
+		03842E7318CC8C9E00F0E3FA /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6518CC8C9E00F0E3FA /* Dog.m */; };
+		03842E7418CC8C9E00F0E3FA /* Donkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6718CC8C9E00F0E3FA /* Donkey.m */; };
+		03842E7518CC8C9E00F0E3FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6818CC8C9E00F0E3FA /* main.m */; };
+		03842E7618CC8C9E00F0E3FA /* Monkey.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6A18CC8C9E00F0E3FA /* Monkey.m */; };
+		03842E7718CC8C9E00F0E3FA /* Zoo.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6C18CC8C9E00F0E3FA /* Zoo.m */; };
+		03842E7818CC8C9E00F0E3FA /* ZooDirector.m in Sources */ = {isa = PBXBuildFile; fileRef = 03842E6E18CC8C9E00F0E3FA /* ZooDirector.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03842E4B18CC8C8600F0E3FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				03842E5818CC8C8600F0E3FA /* Labs2.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03842E4D18CC8C8600F0E3FA /* Labs2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labs2; sourceTree = BUILT_PRODUCTS_DIR; };
+		03842E5018CC8C8600F0E3FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03842E5618CC8C8600F0E3FA /* Labs2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Labs2-Prefix.pch"; sourceTree = "<group>"; };
+		03842E5718CC8C8600F0E3FA /* Labs2.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Labs2.1; sourceTree = "<group>"; };
+		03842E5E18CC8C9E00F0E3FA /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		03842E5F18CC8C9E00F0E3FA /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		03842E6018CC8C9E00F0E3FA /* CatLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatLike.h; sourceTree = "<group>"; };
+		03842E6118CC8C9E00F0E3FA /* CatLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatLike.m; sourceTree = "<group>"; };
+		03842E6218CC8C9E00F0E3FA /* Cow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cow.h; sourceTree = "<group>"; };
+		03842E6318CC8C9E00F0E3FA /* Cow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cow.m; sourceTree = "<group>"; };
+		03842E6418CC8C9E00F0E3FA /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		03842E6518CC8C9E00F0E3FA /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		03842E6618CC8C9E00F0E3FA /* Donkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Donkey.h; sourceTree = "<group>"; };
+		03842E6718CC8C9E00F0E3FA /* Donkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Donkey.m; sourceTree = "<group>"; };
+		03842E6818CC8C9E00F0E3FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		03842E6918CC8C9E00F0E3FA /* Monkey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monkey.h; sourceTree = "<group>"; };
+		03842E6A18CC8C9E00F0E3FA /* Monkey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monkey.m; sourceTree = "<group>"; };
+		03842E6B18CC8C9E00F0E3FA /* Zoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zoo.h; sourceTree = "<group>"; };
+		03842E6C18CC8C9E00F0E3FA /* Zoo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zoo.m; sourceTree = "<group>"; };
+		03842E6D18CC8C9E00F0E3FA /* ZooDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooDirector.h; sourceTree = "<group>"; };
+		03842E6E18CC8C9E00F0E3FA /* ZooDirector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooDirector.m; sourceTree = "<group>"; };
+		03842E6F18CC8C9E00F0E3FA /* ZooKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooKit.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03842E4A18CC8C8600F0E3FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03842E5118CC8C8600F0E3FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03842E4418CC8C8600F0E3FA = {
+			isa = PBXGroup;
+			children = (
+				03842E5218CC8C8600F0E3FA /* Labs2 */,
+				03842E4F18CC8C8600F0E3FA /* Frameworks */,
+				03842E4E18CC8C8600F0E3FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03842E4E18CC8C8600F0E3FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03842E4D18CC8C8600F0E3FA /* Labs2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03842E4F18CC8C8600F0E3FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03842E5018CC8C8600F0E3FA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03842E5218CC8C8600F0E3FA /* Labs2 */ = {
+			isa = PBXGroup;
+			children = (
+				03842E5E18CC8C9E00F0E3FA /* Animal.h */,
+				03842E5F18CC8C9E00F0E3FA /* Animal.m */,
+				03842E6018CC8C9E00F0E3FA /* CatLike.h */,
+				03842E6118CC8C9E00F0E3FA /* CatLike.m */,
+				03842E6218CC8C9E00F0E3FA /* Cow.h */,
+				03842E6318CC8C9E00F0E3FA /* Cow.m */,
+				03842E6418CC8C9E00F0E3FA /* Dog.h */,
+				03842E6518CC8C9E00F0E3FA /* Dog.m */,
+				03842E6618CC8C9E00F0E3FA /* Donkey.h */,
+				03842E6718CC8C9E00F0E3FA /* Donkey.m */,
+				03842E6818CC8C9E00F0E3FA /* main.m */,
+				03842E6918CC8C9E00F0E3FA /* Monkey.h */,
+				03842E6A18CC8C9E00F0E3FA /* Monkey.m */,
+				03842E6B18CC8C9E00F0E3FA /* Zoo.h */,
+				03842E6C18CC8C9E00F0E3FA /* Zoo.m */,
+				03842E6D18CC8C9E00F0E3FA /* ZooDirector.h */,
+				03842E6E18CC8C9E00F0E3FA /* ZooDirector.m */,
+				03842E6F18CC8C9E00F0E3FA /* ZooKit.h */,
+				03842E5718CC8C8600F0E3FA /* Labs2.1 */,
+				03842E5518CC8C8600F0E3FA /* Supporting Files */,
+			);
+			path = Labs2;
+			sourceTree = "<group>";
+		};
+		03842E5518CC8C8600F0E3FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				03842E5618CC8C8600F0E3FA /* Labs2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03842E4C18CC8C8600F0E3FA /* Labs2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03842E5B18CC8C8600F0E3FA /* Build configuration list for PBXNativeTarget "Labs2" */;
+			buildPhases = (
+				03842E4918CC8C8600F0E3FA /* Sources */,
+				03842E4A18CC8C8600F0E3FA /* Frameworks */,
+				03842E4B18CC8C8600F0E3FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Labs2;
+			productName = Labs2;
+			productReference = 03842E4D18CC8C8600F0E3FA /* Labs2 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03842E4518CC8C8600F0E3FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Nicolas VERINAUD";
+			};
+			buildConfigurationList = 03842E4818CC8C8600F0E3FA /* Build configuration list for PBXProject "Labs2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 03842E4418CC8C8600F0E3FA;
+			productRefGroup = 03842E4E18CC8C8600F0E3FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03842E4C18CC8C8600F0E3FA /* Labs2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03842E4918CC8C8600F0E3FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03842E7718CC8C9E00F0E3FA /* Zoo.m in Sources */,
+				03842E7418CC8C9E00F0E3FA /* Donkey.m in Sources */,
+				03842E7218CC8C9E00F0E3FA /* Cow.m in Sources */,
+				03842E7018CC8C9E00F0E3FA /* Animal.m in Sources */,
+				03842E7618CC8C9E00F0E3FA /* Monkey.m in Sources */,
+				03842E7818CC8C9E00F0E3FA /* ZooDirector.m in Sources */,
+				03842E7318CC8C9E00F0E3FA /* Dog.m in Sources */,
+				03842E7518CC8C9E00F0E3FA /* main.m in Sources */,
+				03842E7118CC8C9E00F0E3FA /* CatLike.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		03842E5918CC8C8600F0E3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		03842E5A18CC8C8600F0E3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		03842E5C18CC8C8600F0E3FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Labs2/Labs2-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03842E5D18CC8C8600F0E3FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Labs2/Labs2-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03842E4818CC8C8600F0E3FA /* Build configuration list for PBXProject "Labs2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03842E5918CC8C8600F0E3FA /* Debug */,
+				03842E5A18CC8C8600F0E3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03842E5B18CC8C8600F0E3FA /* Build configuration list for PBXNativeTarget "Labs2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03842E5C18CC8C8600F0E3FA /* Debug */,
+				03842E5D18CC8C8600F0E3FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03842E4518CC8C8600F0E3FA /* Project object */;
+}
