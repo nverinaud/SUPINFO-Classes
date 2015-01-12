@@ -13,9 +13,6 @@
 		03583647175F1D9D006562B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03583645175F1D9D006562B0 /* InfoPlist.strings */; };
 		03583649175F1D9D006562B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03583648175F1D9D006562B0 /* main.m */; };
 		0358364D175F1D9D006562B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0358364C175F1D9D006562B0 /* AppDelegate.m */; };
-		0358364F175F1D9D006562B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358364E175F1D9D006562B0 /* Default.png */; };
-		03583651175F1D9D006562B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03583650175F1D9D006562B0 /* Default@2x.png */; };
-		03583653175F1D9D006562B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03583652175F1D9D006562B0 /* Default-568h@2x.png */; };
 		0358365C175F1DC4006562B0 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0358365A175F1DC4006562B0 /* MyViewController.m */; };
 		0358365D175F1DC4006562B0 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0358365B175F1DC4006562B0 /* MyViewController.xib */; };
 		0358365F175F22D4006562B0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0358365E175F22D4006562B0 /* Storyboard.storyboard */; };
@@ -37,9 +34,6 @@
 		0358364A175F1D9D006562B0 /* DemoInterfaceBuilder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoInterfaceBuilder-Prefix.pch"; sourceTree = "<group>"; };
 		0358364B175F1D9D006562B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0358364C175F1D9D006562B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0358364E175F1D9D006562B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		03583650175F1D9D006562B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		03583652175F1D9D006562B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		03583659175F1DC4006562B0 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		0358365A175F1DC4006562B0 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		0358365B175F1DC4006562B0 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
@@ -124,9 +118,6 @@
 				03583645175F1D9D006562B0 /* InfoPlist.strings */,
 				03583648175F1D9D006562B0 /* main.m */,
 				0358364A175F1D9D006562B0 /* DemoInterfaceBuilder-Prefix.pch */,
-				0358364E175F1D9D006562B0 /* Default.png */,
-				03583650175F1D9D006562B0 /* Default@2x.png */,
-				03583652175F1D9D006562B0 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,9 +174,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03583647175F1D9D006562B0 /* InfoPlist.strings in Resources */,
-				0358364F175F1D9D006562B0 /* Default.png in Resources */,
-				03583651175F1D9D006562B0 /* Default@2x.png in Resources */,
-				03583653175F1D9D006562B0 /* Default-568h@2x.png in Resources */,
 				0358365D175F1DC4006562B0 /* MyViewController.xib in Resources */,
 				0358365F175F22D4006562B0 /* Storyboard.storyboard in Resources */,
 				0358366A175F2A62006562B0 /* banana.png in Resources */,
@@ -320,6 +308,7 @@
 				03583658175F1D9D006562B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

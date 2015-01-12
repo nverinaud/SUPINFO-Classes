@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
 	
 	@autoreleasepool {
 		Zoo *zoo = [[Zoo alloc] init];
-		zoo.director = [[ZooDirector alloc] initWithFirstname:@"Indiana" andLastname:@"Johns"];
+		zoo.director = [[ZooDirector alloc] initWithFirstname:@"Indiana" andLastname:@"Jones"];
 		
 		[zoo addAnimal:[[Dog alloc] initWithName:@"Pluto" andAge:5]];
 		[zoo addAnimal:[[Donkey alloc] initWithName:@"Donkey Kong" andAge:10]];

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BB3F4DC6-8370-4F53-9990-7D6D9B7364DE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Labs2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D86FE1663075CA1E026499C4E1F57E48E8AC54D7</key>
+		<string>github.com:nverinaud/SUPINFO-Classes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>3APL/Part 1/Labs2/Labs2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D86FE1663075CA1E026499C4E1F57E48E8AC54D7</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:nverinaud/SUPINFO-Classes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D86FE1663075CA1E026499C4E1F57E48E8AC54D7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D86FE1663075CA1E026499C4E1F57E48E8AC54D7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SUPINFO-Classes</string>
+		</dict>
+	</array>
+</dict>
+</plist>
