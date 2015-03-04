@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shx-Ax-0aS">
+                                <rect key="frame" x="132" y="518" width="57" height="30"/>
+                                <state key="normal" title="Animate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doAnimation" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eNV-G1-U4A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corner Radius :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycj-IL-ACF">
+                                <rect key="frame" x="16" y="489" width="121" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HSX-nn-fzi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OD-9y-T6x">
+                                <rect key="frame" x="145" y="489" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5W-hK-39w">
+                                <rect key="frame" x="219" y="28" width="85" height="69"/>
+                                <color key="backgroundColor" red="1" green="0.01085102558" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ycj-IL-ACF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="4qb-AT-pJg"/>
+                            <constraint firstAttribute="centerX" secondItem="Shx-Ax-0aS" secondAttribute="centerX" constant="-0.5" id="AEu-16-EdB"/>
+                            <constraint firstItem="Shx-Ax-0aS" firstAttribute="top" secondItem="Ycj-IL-ACF" secondAttribute="bottom" constant="8" id="Z5g-5O-Ep3"/>
+                            <constraint firstItem="Shx-Ax-0aS" firstAttribute="top" secondItem="9OD-9y-T6x" secondAttribute="bottom" constant="8" id="bWU-kV-HqC"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Shx-Ax-0aS" secondAttribute="bottom" constant="20" id="hSv-Qg-ejb"/>
+                            <constraint firstItem="9OD-9y-T6x" firstAttribute="leading" secondItem="Ycj-IL-ACF" secondAttribute="trailing" constant="8" id="rrz-iP-jxm"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="moveMeView" destination="i5W-hK-39w" id="Tya-LO-ovg"/>
+                        <outlet property="valueLabel" destination="9OD-9y-T6x" id="TDE-8U-fNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="340"/>
+        </scene>
+    </scenes>
+</document>
